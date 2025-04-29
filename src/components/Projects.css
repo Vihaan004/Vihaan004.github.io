@@ -1,0 +1,64 @@
+/* Projects Section Styles */
+.Projects {
+    max-width: 900px;
+    margin: 64px auto 0 auto;
+    padding: 0 32px;
+}
+
+.projects-tag h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #c84b31;
+    margin-bottom: 24px;
+    margin-top: 0;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.projects-list {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    justify-content: flex-start;
+}
+
+.project-name {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.project-card {
+    background: rgba(44, 44, 44, 0.7);
+    border-radius: 12px;
+    padding: 20px 28px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+    font-size: 1.2rem;
+    color: #ecdbba;
+    font-weight: 500;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    background: #1c1c1c;
+}
+
+@media (max-width: 900px) {
+    .Projects {
+        max-width: 98vw;
+        padding: 0 8px;
+    }
+    .projects-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .project-card {
+        width: 100%;
+        min-width: unset;
+        justify-content: flex-start;
+    }
+}
