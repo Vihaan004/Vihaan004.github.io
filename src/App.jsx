@@ -25,7 +25,7 @@ function MainPage() {
 
 function App() {
   return (
-    <Router>
+    <Router basename="/my-site">
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/blog" element={<BlogPage />} />
