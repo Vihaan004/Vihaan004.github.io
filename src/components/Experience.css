@@ -37,7 +37,8 @@
 }
 
 .experience-block:hover {
-    background: rgba(35, 35, 35, 0.9);
+    /* background: rgba(35, 35, 35, 0.9); */
+    background: #1c1c1c;
 }
 
 .experience-block:not(.open) {

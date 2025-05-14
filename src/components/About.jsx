@@ -17,7 +17,7 @@ function About() {
             </div>
             <div className="wrapper">
                 <p className="intro">
-                    Hi, I'm Vihaan Patel—a junior at Arizona State University pursuing a BSE in Computer Systems Engineering. I am passionate about hardware design, embedded systems, and software development. My interests include FPGA design, machine learning, and creating impactful engineering solutions. When I'm not working on projects, I enjoy exploring music, reading, and experimenting with new technologies.
+                    Hi, I'm Vihaan Patel - a senior at Arizona State Univeristy pursuing a BSE in Computer Engineering. I am passionate about solving real world problems with elegant and impactful solutions with tech. My interests include hardware design, FPGAs, embedded systems, edge computing, machine learning, and web app development. When I'm not working on projects, I enjoy exploring music, traveling, practicing golf, and updating my dad joke archive.
                 </p>
                 <div className="me">
                     <img src={myImage} alt="Vihaan Patel" />
