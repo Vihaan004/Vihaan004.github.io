@@ -61,6 +61,14 @@ sort-button:active {
   gap: 32px;
 }
 
+.blog-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+  cursor: pointer;
+}
+
 .blog-post-card {
   background: rgba(44, 44, 44, 0.7);
   border-radius: 12px;
@@ -69,11 +77,15 @@ sort-button:active {
   display: flex;
   flex-direction: column;
   height: 100%;
-  transition: background 0.3s;
+  min-height: 220px;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  position: relative;
 }
 
 .blog-post-card:hover {
   background: #1c1c1c;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px 0 rgba(0,0,0,0.12);
 }
 
 .post-title {
@@ -84,14 +96,47 @@ sort-button:active {
 }
 
 .post-meta {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.post-date {
   font-size: 0.9rem;
   color: #c84b31;
   font-weight: 400;
-  margin-bottom: 12px;
+}
+
+.post-tags {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px;
+}
+
+.post-tag-item {
+  background-color: rgba(200, 75, 49, 0.15);
+  color: #c84b31;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.pinned-icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 20px;
+  height: 20px;
+  color: #64ffda;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+  z-index: 1;
+}
+
+.pinned-icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 .pinned-badge {
@@ -107,20 +152,33 @@ sort-button:active {
   font-size: 1rem;
   color: #ecdbba;
   font-weight: 300;
-  margin-bottom: 16px;
   flex-grow: 1;
 }
 
 .read-post-link {
-  color: #64ffda;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: opacity 0.3s;
-  align-self: flex-start;
+  display: none;
 }
 
-.read-post-link:hover {
-  opacity: 0.8;
+.card-arrow {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 18px;
+  height: 18px;
+  transform: rotate(0deg);
+  opacity: 0.7;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.blog-post-card:hover .card-arrow {
+  color: #64ffda;
+  opacity: 1;
+  transform: rotate(-45deg) scale(1.2);
+}
+
+.card-arrow svg {
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 900px) {

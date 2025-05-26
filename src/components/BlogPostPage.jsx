@@ -32,19 +32,21 @@ function BlogPostPage() {
       <div className="blog-post-header">
         <h1>{post.title}</h1>
         <Link to="/blog" className="back-link">← Back to all posts</Link>
-      </div>
-      
-      <div className="post-meta">
-        <div className="post-date-tags">
-          {post.date} • {post.tags.join(", ")}
-          {post.isPinned && <span className="pinned-badge">Featured</span>}
+      </div>      <div className="post-meta">
+        <div className="post-date-line">
+          {post.date}
+        </div>
+        <div className="post-tags-line">
+          {post.tags.map((tag, index) => (
+            <span key={index} className="post-tag-item">{tag}</span>
+          ))}
         </div>
       </div>
-      
-      <div className="post-content">
-        {/* For now we'll just display the snippet until full content is added */}
-        <p>{post.snippet}</p>
-        <p>{post.content}</p>
+        <div className="post-content">
+        <p className="post-snippet">{post.snippet}</p>
+        {post.content.split('\n\n').map((paragraph, index) => (
+          <p key={index}>{paragraph}</p>
+        ))}
       </div>
     </div>
   );

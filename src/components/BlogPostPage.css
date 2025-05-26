@@ -34,14 +34,26 @@
   margin-bottom: 32px;
 }
 
-.post-date-tags {
+.post-date-line {
   font-size: 1rem;
   color: #c84b31;
   font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.post-tags-line {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px;
+}
+
+.post-tag-item {
+  background-color: rgba(200, 75, 49, 0.15);
+  color: #c84b31;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 
 .pinned-badge {
@@ -54,14 +66,32 @@
 }
 
 .post-content {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #ecdbba;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.7;
+  background-color: rgba(44, 44, 44, 0.7);
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.08);
+  position: relative;
+  transition: background 0.3s;
 }
+
+/* .post-content:hover {
+  background: #1c1c1c;
+} */
 
 .post-content p {
   margin-bottom: 1.5rem;
+}
+
+.post-content .post-snippet {
+  font-weight: 500;
+  font-size: 1.3rem;
+  border-left: 3px solid #c84b31;
+  padding-left: 16px;
+  font-style: italic;
 }
 
 @media (max-width: 900px) {

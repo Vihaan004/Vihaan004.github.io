@@ -41,6 +41,10 @@
     background: #1c1c1c;
 }
 
+.experience-block:hover .exp-arrow {
+    color: rgba(35, 35, 35, 0.7);
+}
+
 .experience-block:not(.open) {
     max-height: 70px;
 }
@@ -95,9 +99,10 @@
     font-size: 1rem;
     color: #ecdbba;
     font-weight: 300;
-    margin-top: 6px;
+    margin-top: 12px;
     transition: opacity 0.3s;
     opacity: 1;
+    line-height: 1.6;
 }
 
 .experience-block:not(.open) .exp-desc {
