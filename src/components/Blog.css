@@ -165,3 +165,68 @@
         padding: 20px 10px;
     }
 }
+
+/* Additional mobile optimizations */
+@media (max-width: 480px) {
+    .Blog {
+        margin-top: 40px;
+        padding: 0 12px;
+    }
+    
+    .blog-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 16px;
+    }
+    
+    .blog-tag h1 {
+        font-size: 1.75rem;
+        margin-bottom: 10px;
+    }
+    
+    .view-all-link {
+        font-size: 0.9rem;
+    }
+    
+    .blog-card {
+        padding: 16px 12px;
+        min-height: 150px;
+    }
+    
+    .blog-title {
+        font-size: 1.4rem;
+    }
+    
+    .blog-date {
+        font-size: 0.9rem;
+    }
+    
+    .blog-tags {
+        gap: 6px;
+        margin-bottom: 8px;
+    }
+    
+    .blog-tag-item {
+        padding: 2px 6px;
+        font-size: 0.75rem;
+    }
+    
+    .blog-snippet {
+        font-size: 0.95rem;
+    }
+    
+    .pinned-icon {
+        top: 12px;
+        right: 12px;
+        width: 16px;
+        height: 16px;
+    }
+    
+    .card-arrow {
+        bottom: 12px;
+        right: 12px;
+        width: 16px;
+        height: 16px;
+    }
+}

@@ -67,3 +67,30 @@
         height: 110px;
     }
 }
+
+/* Additional mobile optimizations */
+@media (max-width: 480px) {
+    .About {
+        margin-top: 50px;
+        padding: 0 16px;
+    }
+    
+    .tag h1 {
+        font-size: 1.75rem;
+        margin-bottom: 16px;
+    }
+    
+    .intro {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    
+    .wrapper {
+        gap: 16px;
+    }
+    
+    .tag {
+        max-width: 100%;
+        width: 100%;
+    }
+}

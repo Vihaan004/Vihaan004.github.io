@@ -216,3 +216,56 @@ sort-button:active {
     width: 100%;
   }
 }
+
+/* Additional mobile optimizations */
+@media (max-width: 480px) {
+  .blog-page {
+    padding: 0 12px;
+    margin: 40px auto 32px;
+  }
+  
+  .blog-page-header h1 {
+    font-size: 2rem;
+  }
+  
+  .back-link {
+    font-size: 0.9rem;
+  }
+  
+  .blog-post-card {
+    padding: 16px 12px;
+  }
+  
+  .post-title {
+    font-size: 1.4rem;
+  }
+  
+  .post-meta {
+    margin-bottom: 8px;
+  }
+  
+  .post-date {
+    font-size: 0.85rem;
+  }
+  
+  .post-tags {
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+  
+  .post-tag-item {
+    padding: 2px 6px;
+    font-size: 0.7rem;
+  }
+  
+  .post-snippet {
+    font-size: 0.9rem;
+  }
+  
+  .card-arrow {
+    bottom: 12px;
+    right: 12px;
+    width: 16px;
+    height: 16px;
+  }
+}

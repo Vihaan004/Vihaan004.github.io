@@ -3,3 +3,11 @@
     height: 100vh;
     display: flex;
 }
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+    .Home {
+        height: auto;
+        min-height: 100vh;
+    }
+}

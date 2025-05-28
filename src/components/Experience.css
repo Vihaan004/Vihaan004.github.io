@@ -124,3 +124,52 @@
         min-height: 220px;
     }
 }
+
+/* Additional mobile optimizations */
+@media (max-width: 480px) {
+    .Experience {
+        margin-top: 40px;
+        padding: 0 12px;
+    }
+    
+    .experience-tag h1 {
+        font-size: 1.75rem;
+        margin-bottom: 16px;
+    }
+    
+    .experience-list {
+        gap: 20px;
+    }
+    
+    .experience-block {
+        padding: 18px 16px;
+    }
+    
+    .exp-title-location {
+        font-size: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+    
+    .exp-location {
+        font-size: 0.8rem;
+    }
+    
+    .exp-right-group {
+        gap: 6px;
+    }
+    
+    .exp-duration {
+        font-size: 0.85rem;
+    }
+    
+    .exp-desc {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .experience-block:not(.open) {
+        max-height: 85px;
+    }
+}
