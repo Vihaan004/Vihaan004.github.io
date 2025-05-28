@@ -1,5 +1,3 @@
-An unsuspecting hardware guy explores how Microsoft and Github are quietly turning the internet into a place where code writes itself.
-
 You're probably thinking how does this hardware guy have such a neat website? The answer to that is what anyone would think to be obvious, generative AI. 
 
 However, a generative AI that builds entire apps, does multi-step coding, analyzes and modifies your entire codebase for you with a single prompt is something we need to talk about. Say hello to the natural language programmer. 
