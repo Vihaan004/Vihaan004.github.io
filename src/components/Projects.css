@@ -197,21 +197,21 @@
         margin-top: 40px;
         padding: 0 12px;
     }
-    
-    .projects-header {
-        flex-direction: column;
-        align-items: flex-start;
+      .projects-header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
         gap: 10px;
         margin-bottom: 16px;
     }
     
     .projects-tag h1 {
         font-size: 1.75rem;
-        margin-bottom: 10px;
+        margin-bottom: 0;
     }
-    
-    .view-all-link {
+      .view-all-link {
         font-size: 0.9rem;
+        white-space: nowrap;
     }
     
     .project-content {

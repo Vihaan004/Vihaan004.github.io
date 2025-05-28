@@ -93,4 +93,9 @@
         max-width: 100%;
         width: 100%;
     }
+    
+    /* Hide profile photo on mobile */
+    .me {
+        display: none;
+    }
 }

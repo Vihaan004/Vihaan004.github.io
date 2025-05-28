@@ -41,12 +41,13 @@
     background: #1c1c1c;
 }
 
-.experience-block:hover .exp-arrow {
-    color: rgba(35, 35, 35, 0.7);
-}
+/* .experience-block:hover .exp-arrow {
+    color: rgba(94, 94, 94, 0.7);
+} */
 
 .experience-block:not(.open) {
     max-height: 70px;
+    overflow: hidden;
 }
 
 .exp-header {
@@ -82,7 +83,7 @@
 }
 
 .exp-duration {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #ecdbba;
     font-weight: 400;
     text-align: right;
@@ -92,7 +93,7 @@
 .exp-arrow {
     font-size: 1rem;
     margin-left: 6px;
-    color: #1c1c1c;
+    color: #333333;
 }
 
 .exp-desc {
@@ -105,9 +106,17 @@
     line-height: 1.6;
 }
 
-.experience-block:not(.open) .exp-desc {
+.experience-block:not(.open) .exp-desc,
+.exp-desc.hidden {
     opacity: 0;
     pointer-events: none;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+    position: absolute !important;
+    visibility: hidden;
+    max-height: 0 !important;
 }
 
 @media (max-width: 900px) {
@@ -118,10 +127,9 @@
     .experience-list {
         max-width: 98vw;
         padding: 0 8px;
-    }
-    .experience-block {
+    }    .experience-block {
         max-width: 100%;
-        min-height: 220px;
+        min-height: auto; /* Allow natural height */
     }
 }
 
@@ -131,45 +139,72 @@
         margin-top: 40px;
         padding: 0 12px;
     }
+      .experience-block {
+        transition: background 0.2s, box-shadow 0.2s, max-height 0.2s ease-out;
+    }
     
     .experience-tag h1 {
         font-size: 1.75rem;
         margin-bottom: 16px;
-    }
-    
-    .experience-list {
-        gap: 20px;
-    }
-    
-    .experience-block {
-        padding: 18px 16px;
-    }
-    
-    .exp-title-location {
+    }    .experience-list {
+        gap: 10px; /* Reduced gap between cards */
+    }.experience-block {
+        padding: 10px 16px 10px 16px; /* Equal padding top and bottom */
+    }.exp-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }    .exp-title-location {
         font-size: 1rem;
         flex-direction: column;
         align-items: flex-start;
-        gap: 2px;
+        gap: 1px;
+    }
+    
+    .exp-role {
+        color: #8892b0;
     }
     
     .exp-location {
         font-size: 0.8rem;
-    }
-    
-    .exp-right-group {
-        gap: 6px;
+    }    .exp-right-group {
+        margin-left: 0;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: -2px;
     }
     
     .exp-duration {
         font-size: 0.85rem;
-    }
-    
-    .exp-desc {
+    }      .exp-desc {
         font-size: 0.9rem;
         line-height: 1.5;
+        margin-top: 8px;
+        display: block; /* Ensure it's a block element */
+    }    
+    .experience-block:not(.open) {
+        max-height: 65px !important; /* Slightly increased height for collapsed state */
+        padding-bottom: 10px !important; /* Match top padding when collapsed */
+        overflow: hidden !important;
     }
     
-    .experience-block:not(.open) {
-        max-height: 85px;
+    .experience-block.open {
+        padding-bottom: 14px; /* Add more padding when open */
+        max-height: none !important; /* Remove height restriction */
+    }
+    
+    .experience-block {
+        gap: 0; /* Removing gap to save vertical space */
+        padding-top: 10px; /* Adjust top padding */
+        position: relative; /* For absolute positioning of hidden content */
+        min-height: auto !important; /* Override any min-height */
+    }
+      .exp-separator {
+        display: none;
+    }
+    
+    .exp-arrow {
+        font-size: 0.8rem; /* Smaller dropdown icon */
+        margin-left: 4px;
     }
 }

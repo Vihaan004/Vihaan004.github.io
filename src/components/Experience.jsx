@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Experience.css";
 
 function Experience() {
-  const [openIndexes, setOpenIndexes] = useState([0]);
+  const [openIndexes, setOpenIndexes] = useState([]);
   const experiences = [
     {
       title: "Lead Tutor",
@@ -56,15 +56,14 @@ function Experience() {
             <div className="exp-header">
               <div className="exp-title-location">
                 <span className="exp-role">{exp.title}</span>
-                <span className="exp-separator"> - </span>
+                {/* <span className="exp-separator"> - </span> */}
                 <span className="exp-location">{exp.company}</span>
               </div>
               <div className="exp-right-group">
                 <div className="exp-duration">{exp.duration}</div>
                 <div className="exp-arrow">{openIndexes.includes(idx) ? "▲" : "▼"}</div>
               </div>
-            </div>
-            {openIndexes.includes(idx) && (
+            </div>            {openIndexes.includes(idx) && (
               <div className="exp-desc">
                 <ul>
                   {exp.bullets.map((b, i) => (
