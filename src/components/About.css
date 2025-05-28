@@ -15,7 +15,7 @@
 }
 
 .tag {
-    max-width: 150px;
+    max-width: 300px; /* Increased from 150px to fit "About Me" on one line */
     margin-bottom: 0;
     border-top: 1px solid #ecdbba;
     border-left: 1px solid #ecdbba;
@@ -43,12 +43,12 @@
 }
 
 .me img {
-    width: 140px;
-    height: 140px;
+    width: 180px;
+    height: 180px;
     border-radius: 8px;
     object-fit: cover;
     box-shadow: 0 2px 16px 0 rgba(0,0,0,0.12);
-    border: 2px solid #2d4263;
+    border: 2px solid #1c1c1c;
     background: #222;
     display: block;
 }

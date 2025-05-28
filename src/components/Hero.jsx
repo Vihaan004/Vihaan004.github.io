@@ -13,7 +13,7 @@ import spotify from "../assets/spotify.svg";
 export default function Hero() {
 return (
     <div className="hero">
-            <div>
+            <div>                    
                     <h3 className="subtitle">Hi, you've just discovered a wild</h3>
                     <h1 className="name">Vihaan Patel</h1>
                     <h2 className="description">I'm a Computer Engineer <span className="progress-text">(in progress)</span></h2>

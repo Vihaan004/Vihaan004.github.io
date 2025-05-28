@@ -1,10 +1,81 @@
+/* Import other fonts if you still want to use them as fallbacks */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
 
+/* Ginto Font declarations */
+@font-face {
+  font-family: 'Ginto';
+  src: url('./assets/fonts/ginto-font-family-1748295818-0/ABCGintoNord-Regular-Trial-BF651b7b7309b43.woff') format('woff'),
+       url('./assets/fonts/ginto-font-family-1748295818-0/ABCGintoNord-Regular-Trial-BF651b7b7786b8a.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ginto';
+  src: url('./assets/fonts/ginto-font-family-1748295818-0/ABCGintoNord-Medium-Trial-BF651b7b74152a8.woff') format('woff'),
+       url('./assets/fonts/ginto-font-family-1748295818-0/ABCGintoNord-Medium-Trial-BF651b7b7839fc0.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ginto';
+  src: url('./assets/fonts/ginto-font-family-1748295818-0/ABCGintoNord-Bold-Trial-BF651b7b71a7e37.woff') format('woff'),
+       url('./assets/fonts/ginto-font-family-1748295818-0/ABCGintoNord-Bold-Trial-BF651b7b7670e10.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Add Light variant */
+@font-face {
+  font-family: 'Ginto';
+  src: url('./assets/fonts/ginto-font-family-1748295818-0/ABCGintoNord-Light-Trial-BF651b7b72913b5.woff') format('woff'),
+       url('./assets/fonts/ginto-font-family-1748295818-0/ABCGintoNord-Light-Trial-BF651b7b774e227.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
-  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  font-family: 'Ginto', 'Inter', 'Segoe UI', Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #191919;
   color: #ecdbba;
+  letter-spacing: 0.03rem;
+  word-spacing: 0.07rem;
+  /* line-height: 1rem;; */
 }
+
+/* Common link arrow styles for all components */
+.link-arrow {
+  width: 18px;
+  height: 18px;
+  transform: rotate(0deg);
+  opacity: 0.7;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.link-arrow.back {
+  transform: rotate(180deg);
+}
+
+.view-all-link:hover .link-arrow,
+.back-link:hover .link-arrow {
+  opacity: 1;
+  transform: rotate(-45deg) scale(1.2);
+}
+
+.back-link:hover .link-arrow.back {
+  transform: rotate(135deg) scale(1.2);
+}
+
+.link-arrow svg {
+  width: 100%;
+  height: 100%;
+}
+

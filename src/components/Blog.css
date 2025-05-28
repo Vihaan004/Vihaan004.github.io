@@ -24,14 +24,17 @@
 }
 
 .view-all-link {
-    color: #64ffda;
+    color: #ecdbba;
     font-size: 1rem;
     text-decoration: none;
-    transition: opacity 0.3s;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .view-all-link:hover {
-    opacity: 0.8;
+    color: #64ffda;
 }
 
 .blog-list {
@@ -60,9 +63,14 @@
     right: 16px;
     width: 20px;
     height: 20px;
-    color: #64ffda;
+    color: #ecdbba;
     filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
     z-index: 1;
+    transition: color 0.3s;
+}
+
+.blog-card:hover .pinned-icon {
+    color: #64ffda;
 }
 
 .pinned-icon svg {
