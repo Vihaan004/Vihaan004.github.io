@@ -50,43 +50,6 @@ function BlogPostPage() {
     };
   }, [post]);
 
-  // Add a new useEffect for the IntersectionObserver
-  useEffect(() => {
-    if (!markdown) return;
-
-    const sectionElements = Array.from(document.querySelectorAll('.post-content h2'));
-    const introElement = document.getElementById('introduction');
-    const elementsToObserve = introElement ? [introElement, ...sectionElements] : sectionElements;
-
-    if (elementsToObserve.length === 0) return;
-
-    const handleScroll = () => {
-      let activeId = '';
-      let minDistance = Infinity;
-
-      elementsToObserve.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        // Find element closest to the top of the viewport (with a small offset)
-        const distance = Math.abs(rect.top - 100); 
-        if (distance < minDistance) {
-          minDistance = distance;
-          activeId = el.id;
-        }
-      });
-
-      if (activeId) {
-        setActiveSection(activeId);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [markdown]);
-
   // Extract headers from markdown for table of contents
   const extractTableOfContents = (markdownText) => {
     const headerRegex = /^## (.+)$/gm;
@@ -201,7 +164,7 @@ function BlogPostPage() {
           >            <div className="table-of-contents">
               <a
                 href="#introduction"
-                className={`toc-item ${activeSection === 'introduction' ? 'active' : ''}`}
+                className="toc-item"
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToSection('introduction');
@@ -214,7 +177,7 @@ function BlogPostPage() {
                   <a
                     key={index}
                     href={`#${item.id}`}
-                    className={`toc-item ${activeSection === item.id ? 'active' : ''}`}
+                    className="toc-item"
                     onClick={(e) => {
                       e.preventDefault();
                       scrollToSection(item.id);
