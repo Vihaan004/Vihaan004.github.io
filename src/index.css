@@ -1,8 +1,6 @@
-/* Import other fonts if you still want to use them as fallbacks */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+/* Font imports removed - now using Mona Sans from Google Fonts in HTML */
 
-/* Ginto Font declarations */
+/* Ginto Font declarations - keeping as fallback if needed */
 @font-face {
   font-family: 'Ginto';
   src: url('./assets/fonts/ginto-font-family-1748295818-0/ABCGintoNord-Regular-Trial-BF651b7b7309b43.woff') format('woff'),
@@ -41,7 +39,9 @@
 }
 
 body {
-  font-family: 'Ginto', 'Inter', 'Segoe UI', Arial, Helvetica, sans-serif;
+  font-family: "Mona Sans", 'Ginto', 'Segoe UI', Arial, Helvetica, sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
   margin: 0;
   padding: 0;
   background-color: #191919;
@@ -50,6 +50,18 @@ body {
   word-spacing: 0.07rem;
   /* line-height: 1rem;; */
   overflow-x: hidden;
+}
+
+/* Header font class for main titles and headers */
+.header-font {
+  font-family: 'Ginto', 'Segoe UI', Arial, Helvetica, sans-serif !important;
+  letter-spacing: 0.03rem;
+  word-spacing: 0.07rem;
+}
+
+/* Apply header font to main section titles */
+h1.section-title, .section-title h1 {
+  font-family: 'Ginto', 'Segoe UI', Arial, Helvetica, sans-serif;
 }
 
 /* Global mobile optimizations */

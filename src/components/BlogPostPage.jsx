@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import blogPosts from "../data/blogData";
 import ReactMarkdown from "react-markdown";
@@ -6,27 +6,118 @@ import "./BlogPostPage.css";
 
 function BlogPostPage() {
   const { slug } = useParams();
-  const post = blogPosts.find(post => post.slug === slug);
-  const [markdown, setMarkdown] = useState("");
-
+  const post = blogPosts.find(post => post.slug === slug);  const [markdown, setMarkdown] = useState("");
+  const [isSticky, setIsSticky] = useState(false);
+  const [tocItems, setTocItems] = useState([]);
+  const [activeSection, setActiveSection] = useState("introduction");
+  const sidebarRef = useRef(null);
+  const stickyRef = useRef(null);
   useEffect(() => {
     // Scroll to top when post loads
-    window.scrollTo(0, 0);    // Fetch markdown content if post exists
+    // window.scrollTo(0, 0);
+
+    // Handle sticky sidebar
+    const handleScroll = () => {
+      if (sidebarRef.current && stickyRef.current) {
+        const sidebarRect = sidebarRef.current.getBoundingClientRect();
+        const shouldStick = sidebarRect.top <= 20;
+        setIsSticky(shouldStick);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial state
+
+    // Fetch markdown content if post exists
     if (post && post.contentPath) {
       // Use the full path with the base URL
       const fullPath = post.contentPath.startsWith('/') 
         ? `${import.meta.env.BASE_URL}${post.contentPath.substring(1)}`
         : post.contentPath;
-      
-      fetch(fullPath)
+        fetch(fullPath)
         .then(res => res.text())
-        .then(setMarkdown)
+        .then(text => {
+          setMarkdown(text);
+          // Extract headers for table of contents
+          extractTableOfContents(text);
+        })
         .catch(err => {
           console.error("Failed to load markdown:", err);
           setMarkdown("Failed to load post content.");
         });
-    }
+    }    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, [post]);
+
+  // Add a new useEffect for the IntersectionObserver
+  useEffect(() => {
+    if (!markdown) return;
+
+    const sectionElements = Array.from(document.querySelectorAll('.post-content h2'));
+    const introElement = document.getElementById('introduction');
+    const elementsToObserve = introElement ? [introElement, ...sectionElements] : sectionElements;
+
+    if (elementsToObserve.length === 0) return;
+
+    const handleScroll = () => {
+      let activeId = '';
+      let minDistance = Infinity;
+
+      elementsToObserve.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        // Find element closest to the top of the viewport (with a small offset)
+        const distance = Math.abs(rect.top - 100); 
+        if (distance < minDistance) {
+          minDistance = distance;
+          activeId = el.id;
+        }
+      });
+
+      if (activeId) {
+        setActiveSection(activeId);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [markdown]);
+
+  // Extract headers from markdown for table of contents
+  const extractTableOfContents = (markdownText) => {
+    const headerRegex = /^## (.+)$/gm;
+    const headers = [];
+    let match;
+
+    while ((match = headerRegex.exec(markdownText)) !== null) {
+      const title = match[1].trim();
+      const id = title
+        .toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .trim();
+      
+      headers.push({
+        id,
+        title,
+        level: 2
+      });
+    }
+    
+    setTocItems(headers);
+  };
+
+  // Scroll to section when TOC item is clicked
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
   // If post not found, show error
   if (!post) {
     return (
@@ -47,7 +138,6 @@ function BlogPostPage() {
       </div>
     );
   }
-
   // Custom components for ReactMarkdown
   const components = {
     // Custom renderer for links
@@ -61,6 +151,21 @@ function BlogPostPage() {
         >
           {props.children}
         </a>
+      );
+    },
+    // Custom renderer for h2 headers to add IDs
+    h2: ({ node, children, ...props }) => {
+      const text = children?.toString() || '';
+      const id = text
+        .toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .trim();
+      
+      return (
+        <h2 id={id} {...props}>
+          {children}
+        </h2>
       );
     }
   };
@@ -85,11 +190,43 @@ function BlogPostPage() {
           {post.tags.map((tag, index) => (
             <span key={index} className="post-tag-item">{tag}</span>
           ))}
+        </div>      </div>
+      <div className="post-main-container">        <div className="post-content">
+          <p id="introduction" className="post-snippet">{post.snippet}</p>
+          <ReactMarkdown components={components}>{markdown}</ReactMarkdown>
+        </div><div className="post-sidebar" ref={sidebarRef}>
+          <div 
+            className={`sidebar-sticky ${isSticky ? 'sticky-active' : ''}`}
+            ref={stickyRef}
+          >            <div className="table-of-contents">
+              <a
+                href="#introduction"
+                className={`toc-item ${activeSection === 'introduction' ? 'active' : ''}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('introduction');
+                }}
+              >
+                Introduction
+              </a>
+              {tocItems.length > 0 ? (
+                tocItems.map((item, index) => (
+                  <a
+                    key={index}
+                    href={`#${item.id}`}
+                    className={`toc-item ${activeSection === item.id ? 'active' : ''}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(item.id);
+                    }}
+                  >
+                    {item.title}
+                  </a>
+                ))
+              ) : null}
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="post-content">
-        <p className="post-snippet">{post.snippet}</p>
-        <ReactMarkdown components={components}>{markdown}</ReactMarkdown>
       </div>
     </div>
   );

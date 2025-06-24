@@ -1,6 +1,6 @@
 /* Blog Section Styles */
 .Blog {
-    max-width: 900px;
+    max-width: 1100px;
     margin: 64px auto 0 auto;
     padding: 0 32px;
 }
@@ -9,18 +9,19 @@
     font-size: 2rem;
     font-weight: 600;
     color: #c84b31;
-    margin-bottom: 24px;
+    /* margin-bottom: 24px; */
     margin-top: 0;
     padding: 0;
     border: none;
     background: none;
+    font-family: 'Ginto', 'Segoe UI', Arial, Helvetica, sans-serif;
 }
 
 .blog-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 24px;
+    /* margin-bottom: 24px; */
 }
 
 .view-all-link {
@@ -54,7 +55,7 @@
     color: #ecdbba;
     transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
     position: relative;
-    min-height: 200px;  /* Ensure minimum height */
+    /* min-height: 150px; */
 }
 
 .pinned-icon {

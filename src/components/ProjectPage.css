@@ -1,6 +1,6 @@
 /* Project Page Styles */
 .project-page {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 80px auto 64px;
   padding: 0 32px;
 }
@@ -17,6 +17,7 @@
   font-weight: 600;
   color: #c84b31;
   margin: 0;
+  font-family: 'Ginto', 'Segoe UI', Arial, Helvetica, sans-serif;
 }
 
 .back-link {
