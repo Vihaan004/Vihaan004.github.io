@@ -40,7 +40,6 @@
   font-size: 1rem;
   color: var(--text-color);
   font-weight: 400;
-  margin-bottom: 8px;
 }
 
 .post-tags-line {
@@ -84,39 +83,25 @@
 
 /* Styling for markdown links */
 .post-content a {
-  color: #64ffda;
+  color: blue;
   text-decoration: none;
   font-weight: 500;
   position: relative;
   transition: all 0.3s ease;
-  border-bottom: 1px solid rgba(100, 255, 218, 0.3);
+  border-bottom: 1px solid blue;
   padding: 0 2px 1px;
   margin: 0 1px;
-  border-radius: 3px;
 }
 
 .post-content a:hover {
-  color: #191919;
-  background-color: rgba(100, 255, 218, 0.9);
-  border-bottom-color: transparent;
-  box-shadow: 0 2px 8px rgba(100, 255, 218, 0.3);
+  /* color: #191919; */
+  /* background-color: rgba(100, 255, 218, 0.9); */
+  /* border-bottom-color: transparent; */
 }
 
 .post-content a:active {
   transform: translateY(1px);
   box-shadow: 0 1px 3px rgba(100, 255, 218, 0.2);
-}
-
-.post-content a:visited {
-  color: #c84b31;
-  border-bottom: 1px solid rgba(200, 75, 49, 0.3);
-}
-
-.post-content a:visited:hover {
-  color: #191919;
-  background-color: rgba(200, 75, 49, 0.9);
-  border-bottom-color: transparent;
-  box-shadow: 0 2px 8px rgba(200, 75, 49, 0.3);
 }
 
 /* External link styling */

@@ -1,13 +1,13 @@
 /* Blog page styles - completely rebuilt */
 .blog-page {
-  margin: 80px auto 64px;
+  /* margin: 80px auto 64px; */
 }
 
 .blog-page-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 }
 
 .blog-page-header h1 {
