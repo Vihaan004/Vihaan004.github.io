@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./components/Home";
-import About from "./components/About";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Blog from "./components/Blog";
@@ -10,6 +9,7 @@ import ProjectPage from "./components/ProjectPage";
 import Music from "./components/Music";
 import BlogPostPage from "./components/BlogPostPage";
 import "./index.css";
+import Hero from "./components/Hero";
 
 function MainPage() {
   const location = useLocation();
@@ -34,11 +34,11 @@ function MainPage() {
 
   return (
     <>
-      <Home />
-      <About />
-      <Experience />
+      {/* <Home /> */}
+      <Hero />
       <Blog />
       <Projects />
+      <Experience />
       <Music />
     </>
   );

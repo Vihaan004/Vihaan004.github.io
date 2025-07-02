@@ -84,7 +84,7 @@ function BlogPostPage() {
   // If post not found, show error
   if (!post) {
     return (
-      <div className="blog-post-page">        <div className="blog-post-header">
+      <div className="blog-post-page content-width">        <div className="blog-post-header">
           <h1>Post not found</h1>
           <Link to="/blog" className="back-link">
             <div className="link-arrow back">
@@ -134,7 +134,7 @@ function BlogPostPage() {
   };
 
   return (
-    <div className="blog-post-page">      <div className="blog-post-header">
+    <div className="blog-post-page content-width">      <div className="blog-post-header">
         <h1>{post.title}</h1>
         <Link to="/blog" className="back-link">
           <div className="link-arrow back">

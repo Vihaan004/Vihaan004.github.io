@@ -1,7 +1,5 @@
 .blog-post-page {
-  max-width: 1200px;
   margin: 80px auto 64px;
-  padding: 0 32px;
 }
 
 .blog-post-header {
@@ -14,23 +12,24 @@
 .blog-post-header h1 {
   font-size: 2.5rem;
   font-weight: 600;
-  color: #8892b0;
+  color: var(--text-color);
   margin: 0;
   max-width: 80%;
 }
 
 .back-link {
-  color: #ecdbba;
+  color: var(--text-color);
   text-decoration: none;
-  transition: color 0.3s;
+  transition: all 0.3s;
   font-size: 1rem;
   display: flex;
   align-items: center;
   gap: 8px;
+  border-bottom: 1px solid transparent;
 }
 
 .back-link:hover {
-  color: #64ffda;
+  border-bottom: 1px solid var(--text-color);
 }
 
 .post-meta {
@@ -39,7 +38,7 @@
 
 .post-date-line {
   font-size: 1rem;
-  color: #c84b31;
+  color: var(--text-color);
   font-weight: 400;
   margin-bottom: 8px;
 }
@@ -50,107 +49,37 @@
   gap: 8px;
 }
 
-.post-main-container {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  position: relative;
-}
-.post-tag-item {
-  background-color: rgba(200, 75, 49, 0.15);
-  color: #c84b31;
-  padding: 3px 8px;
+.post-tag {
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
   border-radius: 4px;
+  padding: 4px 10px;
   font-size: 0.85rem;
-  font-weight: 500;
-}
-
-.pinned-badge {
-  background: #2d4263;
-  color: #ecdbba;
-  font-size: 0.75rem;
-  padding: 3px 8px;
-  border-radius: 4px;
-  margin-left: 6px;
+  color: var(--text-color);
 }
 
 .post-content {
-  flex: 1;
-  font-size: 1.2rem;
-  color: #ecdbba;
-  font-weight: 400;
-  line-height: 1.7;
-  background-color: rgba(44, 44, 44, 0.7);
-  padding: 32px;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.08);
-  position: relative;
-  transition: background 0.3s;
-  min-width: 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
 }
 
-.post-sidebar {
-  width: 280px;
-  flex-shrink: 0;
-  position: relative;
+.post-content h2 {
+  font-size: 1.8rem;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  color: var(--text-color);
 }
 
-.sidebar-sticky {
-  height: fit-content;
-  z-index: 10;
-  /* transition: all 0.3s ease; */
+.post-content h3 {
+  font-size: 1.4rem;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  color: var(--text-color);
 }
-
-.sidebar-sticky.sticky-active {
-  position: fixed;
-  top: 20px;
-  width: 280px;
-}
-
-.table-of-contents {
-  padding: 0;
-  font-size: 1rem;
-  color: #8892b0;
-}
-
-.toc-item {
-  display: block;
-  color: #8892b0;
-  text-decoration: none;
-  padding: 8px 16px;
-  margin-bottom: 4px;
-  border-left: 2px solid transparent;
-  transition: all 0.2s ease;
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
-
-.toc-item:hover {
-  color: #ecdbba;
-  border-left-color: #64ffda;
-  background-color: rgba(100, 255, 218, 0.05);
-}
-
-.toc-item.active {
-  color: #ecdbba;
-  border-left-color: #c84b31;
-  background-color: rgba(200, 75, 49, 0.1);
-}
-
-/* .post-content:hover {
-  background: #1c1c1c;
-} */
 
 .post-content p {
-  margin-bottom: 1.5rem;
-}
-
-.post-content .post-snippet {
-  font-weight: 500;
-  font-size: 1.3rem;
-  border-left: 3px solid #c84b31;
-  padding-left: 16px;
-  font-style: italic;
+  margin-bottom: 20px;
 }
 
 /* Styling for markdown links */

@@ -42,7 +42,7 @@ function Experience() {
   };
 
   return (
-    <div className="Experience">
+    <div className="Experience content-width">
       <div className="experience-tag">
         <h1>Experience</h1>
       </div>

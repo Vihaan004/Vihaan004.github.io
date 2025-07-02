@@ -2,7 +2,7 @@ import "./Music.css";
 
 function Music() {
   return (
-    <div className="Music">
+    <div className="Music content-width">
       <div className="music-tag">
         <h1>Music</h1>
       </div>

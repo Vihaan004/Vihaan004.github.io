@@ -4,7 +4,7 @@ import myImage from "../assets/me.jpg";
 function About() {
     return (
       <>
-        <div className="About">
+        <div className="About content-width">
             <div className="tag" style={{border: 'none'}}>
                 <h1>About Me</h1>
             </div>            <div className="wrapper">
