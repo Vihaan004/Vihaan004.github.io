@@ -1,45 +1,8 @@
-/* Font imports removed - now using Mona Sans from Google Fonts in HTML */
-
-/* Ginto Font declarations - keeping as fallback if needed */
-@font-face {
-  font-family: 'Ginto';
-  src: url('./assets/fonts/ginto-font-family-1748295818-0/ABCGintoNord-Regular-Trial-BF651b7b7309b43.woff') format('woff'),
-       url('./assets/fonts/ginto-font-family-1748295818-0/ABCGintoNord-Regular-Trial-BF651b7b7786b8a.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Ginto';
-  src: url('./assets/fonts/ginto-font-family-1748295818-0/ABCGintoNord-Medium-Trial-BF651b7b74152a8.woff') format('woff'),
-       url('./assets/fonts/ginto-font-family-1748295818-0/ABCGintoNord-Medium-Trial-BF651b7b7839fc0.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Ginto';
-  src: url('./assets/fonts/ginto-font-family-1748295818-0/ABCGintoNord-Bold-Trial-BF651b7b71a7e37.woff') format('woff'),
-       url('./assets/fonts/ginto-font-family-1748295818-0/ABCGintoNord-Bold-Trial-BF651b7b7670e10.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Add Light variant */
-@font-face {
-  font-family: 'Ginto';
-  src: url('./assets/fonts/ginto-font-family-1748295818-0/ABCGintoNord-Light-Trial-BF651b7b72913b5.woff') format('woff'),
-       url('./assets/fonts/ginto-font-family-1748295818-0/ABCGintoNord-Light-Trial-BF651b7b774e227.otf') format('opentype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
+/* Import Space Grotesk from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap');
 
 body {
-  font-family: "Mona Sans", 'Ginto', 'Segoe UI', Arial, Helvetica, sans-serif;
+  font-family: 'Space Grotesk', 'Segoe UI', Arial, Helvetica, sans-serif;
   font-optical-sizing: auto;
   font-variation-settings: "wdth" 100;
   margin: 0;
@@ -54,14 +17,14 @@ body {
 
 /* Header font class for main titles and headers */
 .header-font {
-  font-family: 'Ginto', 'Segoe UI', Arial, Helvetica, sans-serif !important;
+  font-family: 'Space Grotesk', 'Segoe UI', Arial, Helvetica, sans-serif !important;
   letter-spacing: 0.03rem;
   word-spacing: 0.07rem;
 }
 
 /* Apply header font to main section titles */
 h1.section-title, .section-title h1 {
-  font-family: 'Ginto', 'Segoe UI', Arial, Helvetica, sans-serif;
+  font-family: 'Space Grotesk', 'Segoe UI', Arial, Helvetica, sans-serif;
 }
 
 /* Global mobile optimizations */
