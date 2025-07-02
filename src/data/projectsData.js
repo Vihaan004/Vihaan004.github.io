@@ -25,7 +25,7 @@ const projectsData = [  {
   },  {
     id: 4,
     name: "Deep Learning Image Classification",
-    description: "Comprehensive benchmarking experiments on MedMNIST datasets using multiple frameworks with ResNet architectures.",
+    description: "Benchmarking on MedMNIST datasets using frameworks with ResNet architectures.",
     tags: ["Deep Learning", "PyTorch", "Medical AI", "Computer Vision", "AutoML"],
     link: "https://github.com/Vihaan004/DL-MedMNIST",
     imageUrl: "/project-images/medmnist.png",

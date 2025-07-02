@@ -1,23 +1,17 @@
 /* Projects Section Styles */
 .Projects {
-    margin: 64px auto 0 auto;
 }
 
 .projects-tag h1 {
-    font-size: 2rem;
-    font-weight: 600;
-    color: var(--text-color);
-    margin-top: 0;
+    margin: 0;
     padding: 0;
-    border: none;
-    background: none;
 }
 
 .projects-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* margin-bottom: 24px; */
+    margin-bottom: 16px;
 }
 
 .view-all-link {
@@ -113,9 +107,9 @@
 
 .project-content {
     padding: 16px;
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
+    align-items: top;
 }
 
 .project-description {
@@ -130,7 +124,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
-    margin-bottom: 24px;
+    margin-bottom: 0px;
     margin-top: auto;
 }
 

@@ -5,8 +5,8 @@
 .blog-post-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 16px;
+  align-items: center;
+  margin-bottom: 0px;
 }
 
 .blog-post-header h1 {
@@ -33,7 +33,7 @@
 }
 
 .post-meta {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .post-date-line {

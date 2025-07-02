@@ -56,7 +56,7 @@ function Projects() {
               <div className="project-description">{project.description}</div>
               <div className="project-tags">
                 {project.tags.map((tag, index) => (
-                  <span key={index} className="project-tag-item">{tag}</span>
+                  <span key={index} className="project-tag">{tag}</span>
                 ))}
               </div>
             </div>

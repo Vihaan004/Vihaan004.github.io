@@ -14,7 +14,7 @@
 /* Global content width class for consistent layout */
 .content-width {
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 32px auto 0 auto;
   padding: 0 32px;
 }
 

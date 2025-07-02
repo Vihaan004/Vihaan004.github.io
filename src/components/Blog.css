@@ -4,20 +4,15 @@
 }
 
 .blog-tag h1 {
-    font-size: 2rem;
-    font-weight: 600;
-    color: var(--text-color);
-    margin-top: 0;
+    margin: 0;
     padding: 0;
-    border: none;
-    background: none;
 }
 
 .blog-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* margin-bottom: 24px; */
+    margin-bottom: 16px;
 }
 
 .view-all-link {
@@ -38,30 +33,30 @@
 .blog-list {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 0px;
 }
 
-/* Blog card styles - exactly matching BlogPage.css */
+/* Simple blog list item styles */
 .blog-card-link {
     text-decoration: none;
     color: inherit;
     display: block;
+    border-bottom: 1px solid var(--light-border-color);
+    padding-bottom: 18px;
+    margin-bottom: 18px;
 }
 
-.blog-post-card {
-    background: var(--background-color);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 32px;
-    transition: all 0.3s ease;
-    box-shadow: var(--card-shadow);
-    position: relative;
+.blog-card-link:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
 }
 
-.blog-post-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    background: var(--hover-background);
+.blog-post-item {
+    transition: all 0.2s ease;
+}
+
+.blog-post-item:hover {
+    transform: translateX(4px);
 }
 
 .blog-post-header {
@@ -78,31 +73,18 @@
     margin: 0;
 }
 
-.pinned-icon {
-    width: 16px;
-    height: 16px;
-    opacity: 0.6;
-    margin-left: 8px;
-    flex-shrink: 0;
-}
-
-.pinned-icon svg {
-    width: 100%;
-    height: 100%;
-}
+/* Pin icon removed */
 
 .post-meta {
-    margin-bottom: 16px;
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
 }
 
 .post-date {
     font-size: 0.9rem;
-    color: var(--text-color);
-    opacity: 0.7;
-    font-weight: 400;
+    color: #666;
 }
 
 .post-tags {
@@ -112,115 +94,34 @@
 }
 
 .post-tag-item {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    border: 1px solid var(--border-color);
-    padding: 4px 8px;
-    border-radius: 4px;
     font-size: 0.8rem;
-    font-weight: 500;
-    transition: background-color 0.3s;
-}
-
-.blog-post-card:hover .post-tag-item {
-    background-color: var(--hover-background);
+    background: var(--hover-background);
+    border: 1px solid var(--light-border-color);
+    border-radius: 4px;
+    padding: 2px 8px;
 }
 
 .post-snippet {
     font-size: 1rem;
+    line-height: 1.5;
     color: var(--text-color);
-    font-weight: 300;
-    line-height: 1.6;
-    margin-bottom: 24px;
+    opacity: 0.8;
 }
 
 .card-arrow {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    width: 14px;
-    height: 14px;
-    opacity: 0.7;
-    transition: opacity 0.3s, transform 0.3s;
-}
-
-.blog-post-card:hover .card-arrow {
-    opacity: 1;
-    transform: rotate(-45deg) scale(1.2);
-}
-
-.card-arrow svg {
-    width: 100%;
-    height: 100%;
+    display: none;
 }
 
 /* Mobile styles */
-@media (max-width: 900px) {
-    .Blog {
-        max-width: 98vw;
-        padding: 0 16px;
+@media (max-width: 768px) {
+    /* Keep blog header on same line for consistency with Projects section */
+    
+    .blog-post-header {
+        flex-direction: column;
+        gap: 8px;
     }
     
-    .blog-post-card {
-        padding: 24px;
-    }
-}
-
-/* Additional mobile optimizations */
-@media (max-width: 480px) {
-    .Blog {
-        margin-top: 40px;
-        padding: 0 12px;
-    }
-    
-    .blog-header {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-        margin-bottom: 16px;
-    }
-    
-    .blog-tag h1 {
-        font-size: 1.75rem;
-        margin-bottom: 0;
-    }
-    
-    .view-all-link {
-        font-size: 0.9rem;
-        white-space: nowrap;
-    }
-    
-    .blog-post-card {
-        padding: 20px 16px;
-    }
-    
-    .post-title {
-        font-size: 1.4rem;
-    }
-    
-    .post-date {
-        font-size: 0.85rem;
-    }
-    
-    .post-tags {
-        gap: 6px;
-    }
-    
-    .post-tag-item {
-        padding: 3px 6px;
-        font-size: 0.75rem;
-    }
-    
-    .post-snippet {
-        font-size: 0.95rem;
-        line-height: 1.5;
-    }
-    
-    .card-arrow {
-        bottom: 12px;
-        right: 12px;
-        width: 14px;
-        height: 14px;
+    .post-meta {
+        flex-wrap: wrap;
     }
 }

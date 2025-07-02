@@ -7,15 +7,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 48px;
+  margin-bottom: 12px;
 }
 
-.project-page-header h1 {
+/* .project-page-header h1 {
   font-size: 2.5rem;
   font-weight: 600;
   color: var(--text-color);
   margin: 0;
-}
+} */
 
 .back-link {
   color: var(--text-color);
@@ -70,6 +70,7 @@
   height: 180px;
   overflow: hidden;
   position: relative;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .project-image img {
@@ -110,7 +111,6 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
 }
 
 .project-title {
@@ -125,27 +125,26 @@
   color: var(--text-color);
   line-height: 1.5;
   margin: 0 0 16px 0;
-  flex-grow: 1;
 }
 
 .project-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 0px;
+  /* Prevent tags from being pushed to the bottom */
+  margin-top: auto;
 }
 
 .project-tag {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  border: 1px solid var(--border-color);
-  padding: 4px 8px;
+  font-size: 0.8rem;
+  background: var(--hover-background);
+  border: 1px solid var(--light-border-color);
   border-radius: 4px;
-  font-size: 0.75rem;
-  font-weight: 500;
-  transition: background-color 0.3s, transform 0.3s;
+  padding: 2px 8px;
 }
 
+/* Remove hover effect to match blog tags */
 .project-item:hover .project-tag {
   background-color: var(--hover-background);
 }
