@@ -84,7 +84,8 @@ function BlogPostPage() {
   // If post not found, show error
   if (!post) {
     return (
-      <div className="blog-post-page content-width">        <div className="blog-post-header">
+      <div className="blog-post-page content-width">        
+      <div className="blog-post-header">
           <h1>Post not found</h1>
           <Link to="/blog" className="back-link">
             <div className="link-arrow back">
@@ -142,7 +143,7 @@ function BlogPostPage() {
               <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
             </svg>
           </div>
-          Back to all posts
+          Back
         </Link>
       </div>
       <div className="post-meta">
@@ -153,15 +154,16 @@ function BlogPostPage() {
           {post.tags.map((tag, index) => (
             <span key={index} className="post-tag-item">{tag}</span>
           ))}
-        </div>      </div>
-      <div className="post-main-container">        <div className="post-content">
-          <p id="introduction" className="post-snippet">{post.snippet}</p>
+        </div>     
+      </div>
+      <div className="post-main-container">        
+        <div className="post-content">
+          {/* <p id="introduction" className="post-snippet">{post.snippet}</p> */}
           <ReactMarkdown components={components}>{markdown}</ReactMarkdown>
-        </div><div className="post-sidebar" ref={sidebarRef}>
-          <div 
-            className={`sidebar-sticky ${isSticky ? 'sticky-active' : ''}`}
-            ref={stickyRef}
-          >            <div className="table-of-contents">
+        </div>
+        {/* <div className="post-sidebar" ref={sidebarRef}>
+          <div className={`sidebar-sticky ${isSticky ? 'sticky-active' : ''}`} ref={stickyRef}>            
+          <div className="table-of-contents">
               <a
                 href="#introduction"
                 className="toc-item"
@@ -189,7 +191,7 @@ function BlogPostPage() {
               ) : null}
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

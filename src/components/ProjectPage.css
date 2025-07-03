@@ -1,6 +1,6 @@
 /* Project Page Styles - completely rebuilt */
 .project-page {
-  /* margin: 80px auto 64px; */
+  margin: 70px auto 70px;
 }
 
 .project-page-header {
@@ -20,7 +20,7 @@
 .back-link {
   color: var(--text-color);
   text-decoration: none;
-  transition: all 0.3s;
+  /* transition: all 0.3s; */
   font-size: 1rem;
   display: flex;
   align-items: center;

@@ -1,13 +1,13 @@
 /* Blog page styles - completely rebuilt */
 .blog-page {
-  /* margin: 80px auto 64px; */
+  margin: 70px auto 70px;
 }
 
 .blog-page-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
 }
 
 .blog-page-header h1 {
@@ -31,12 +31,12 @@
   padding: 8px 14px;
   font-size: 0.95rem;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  /* transition: background-color 0.3s, transform 0.2s; */
 }
 
 .sort-button:hover {
   background: var(--hover-background);
-  transform: translateY(-2px);
+  /* transform: translateY(-2px); */
 }
 
 .sort-button:active {
@@ -46,7 +46,7 @@
 .back-link {
   color: var(--text-color);
   text-decoration: none;
-  transition: all 0.3s;
+  /* transition: all 0.3s; */
   border-bottom: 1px solid transparent;
   display: flex;
   align-items: center;
@@ -83,21 +83,26 @@
 }
 
 .blog-post-item:hover {
-  transform: translateX(4px);
+  /* transform: translateX(4px); */
 }
 
 .blog-post-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 5px;
 }
 
 .post-title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: var(--text-color);
   margin: 0;
+}
+
+.post-title:hover {
+  color: var(--hover-text-color);
+  text-decoration: underline;
 }
 
 /* Pin icon removed */

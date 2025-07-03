@@ -18,7 +18,7 @@
     color: var(--text-color);
     font-size: 1rem;
     text-decoration: none;
-    transition: all 0.3s;
+    /* transition: all 0.3s; */
     display: flex;
     align-items: center;
     gap: 8px;
@@ -50,7 +50,7 @@
 
 .project-name {
     font-size: 1.25rem;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--text-color);
     margin-bottom: 8px;
 }

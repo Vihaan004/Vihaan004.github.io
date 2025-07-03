@@ -1,12 +1,12 @@
 .blog-post-page {
-  margin: 80px auto 64px;
+  margin: 70px auto 70px auto;
 }
 
 .blog-post-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0px;
+  margin-bottom: 5px;
 }
 
 .blog-post-header h1 {
@@ -20,7 +20,7 @@
 .back-link {
   color: var(--text-color);
   text-decoration: none;
-  transition: all 0.3s;
+  /* transition: all 0.3s; */
   font-size: 1rem;
   display: flex;
   align-items: center;
@@ -33,7 +33,7 @@
 }
 
 .post-meta {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .post-date-line {

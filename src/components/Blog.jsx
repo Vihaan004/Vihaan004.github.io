@@ -7,9 +7,11 @@ function Blog() {
   const pinnedPosts = blogPosts.filter(post => post.isPinned);
   return (
     <div className="Blog content-width" id="blog-section">
-      <div className="blog-header"><div className="blog-tag">
+      <div className="blog-header">
+        <div className="blog-tag">
           <h1>Blog</h1>
         </div>
+        <div className="header-line" />
         <Link to="/blog" className="view-all-link">
           View all posts 
           <div className="link-arrow">

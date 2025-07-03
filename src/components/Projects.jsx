@@ -12,6 +12,7 @@ function Projects() {
         <div className="projects-tag">
           <h1>Projects</h1>
         </div>
+        <div className="header-line" />
         <Link to="/projects" className="view-all-link">
           View all projects 
           <div className="link-arrow">

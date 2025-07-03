@@ -1,6 +1,10 @@
+---
+
 Remember when everyone was obsessed with cramming everything into the cloud? Well, plot twist—the smartest minds in tech are now racing to bring AI back down to earth. Literally. Welcome to the edge AI revolution, where your smartphone, smartwatch, and even that random IoT sensor in your coffee machine are becoming mini-AI powerhouses.
 
 I've been diving deep into this space lately, and what I'm seeing isn't just another tech trend. It's a fundamental shift in how we think about intelligence, computation, and the future of connected devices. And honestly? The implications are staggering.
+
+---
 
 ## The Great Migration: Why AI is Moving to the Edge
 
