@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import blogPosts from "../data/blogData";
+import blogPosts from "../data/blogDataNotion";
 import "./BlogPage.css";
 import { Link } from "react-router-dom";
 

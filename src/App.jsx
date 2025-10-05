@@ -7,7 +7,7 @@ import Blog from "./components/Blog";
 import BlogPage from "./components/BlogPage";
 import ProjectPage from "./components/ProjectPage";
 import Music from "./components/Music";
-import BlogPostPage from "./components/BlogPostPage";
+import BlogPostEmbedded from "./components/BlogPostEmbedded";
 import "./index.css";
 import Hero from "./components/Hero";
 
@@ -51,7 +51,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/blog" element={<BlogPage />} />
-        <Route path="/blog/:slug" element={<BlogPostPage />} />
+        <Route path="/blog/:slug" element={<BlogPostEmbedded />} />
         <Route path="/projects" element={<ProjectPage />} />
       </Routes>
     </Router>

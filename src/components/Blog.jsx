@@ -1,5 +1,5 @@
 import "./Blog.css";
-import blogPosts from "../data/blogData";
+import blogPosts from "../data/blogDataNotion";
 import { Link } from "react-router-dom";
 
 function Blog() {
@@ -20,7 +20,8 @@ function Blog() {
             </svg>
           </div>
         </Link>
-      </div><div className="blog-list">
+      </div>
+      <div className="blog-list">
         {pinnedPosts.map(post => (
           <Link to={`/blog/${post.slug}`} className="blog-card-link" key={post.id}>
             <div className="blog-post-item">
