@@ -40,6 +40,14 @@ const projectsData = [  {
   imageUrl: "/project-images/map-my-major.png",
   isFeatured: true  },  {
   id: 6,
+  name: "Studiovistara - website",
+  description: "A modern and sleek website design for Studiovistara, an architecture firm based in India.",
+  tags: ["React", "CSS", "JavaScript", "Web Development"],
+  link: "https://github.com/Vihaan004/Vihaan004.github.io",
+  imageUrl: "/project-images/studiovistara.png",
+  isFeatured: true
+  }, {
+  id: 7,
   name: "Personal Website",
   description: "This website! Built with React and deployed on GitHub Pages.",
   tags: ["React", "CSS", "JavaScript", "Web Development"],
