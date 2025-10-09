@@ -32,7 +32,17 @@ const blogPosts = [
     isPinned: false,
     slug: "amazon-press-releases-before-products",
     embedCode: '<iframe src="https://vihaanpatel.notion.site/ebd/2831e9cb485380daa05ae873babd34cb" width="100%" height="100%" frameborder="0" allowfullscreen style="display: block; margin: 0; padding: 0;" />'
-  }  
+  }  ,
+    {
+    id: 4,
+    title: "Spec, Context, Prompt, Repeat",
+    date: "Ocotber 8, 2025",
+    tags: [],
+    snippet: "A short reflection to compare the programmer I dreamed of five years ago with the programmer I'm shaping into right now.",
+    isPinned: true,
+    slug: "",
+    embedCode: '<iframe src="https://vihaanpatel.notion.site/ebd/2811e9cb48538009b242c7ab0b3a7926" width="100%" height="600" frameborder="0" allowfullscreen style="display: block; margin: 0; padding: 0;" />'
+  } 
 ];
 
 //   {
@@ -43,8 +53,7 @@ const blogPosts = [
 //     snippet: "",
 //     isPinned: false,
 //     slug: "",
-//     embedCode: ''
-        // style="display: block; margin: 0; padding: 0;" />
+//     embedCode: ' style="display: block; margin: 0; padding: 0;" />'
 //   }  
 
 export default blogPosts;
