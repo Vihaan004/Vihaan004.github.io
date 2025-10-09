@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   base: '/', // Use '/' since you have a custom domain
   build: {
-    outDir: 'docs'
+    outDir: 'dist'
   },
   plugins: [react()],
 })
