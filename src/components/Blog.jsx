@@ -2,9 +2,27 @@ import "./Blog.css";
 import blogPosts from "../data/blogDataNotion";
 import { Link } from "react-router-dom";
 
+// Helper function for date parsing
+const parseDate = (dateStr) => {
+  const months = {
+    "January": 0, "February": 1, "March": 2, "April": 3, "May": 4, "June": 5, 
+    "July": 6, "August": 7, "September": 8, "October": 9, "November": 10, "December": 11
+  };
+  
+  const [month, day, year] = dateStr.split(" ");
+  return new Date(parseInt(year), months[month], parseInt(day.replace(",", "")));
+};
+
 function Blog() {
-  // Filter only pinned posts for the main page display
-  const pinnedPosts = blogPosts.filter(post => post.isPinned);
+  // Filter only pinned posts and sort by date (most recent first)
+  const pinnedPosts = blogPosts
+    .filter(post => post.isPinned)
+    .sort((a, b) => {
+      const dateA = parseDate(a.date);
+      const dateB = parseDate(b.date);
+      return dateB - dateA; // Most recent first
+    });
+  
   return (
     <div className="Blog content-width" id="blog-section">
       <div className="blog-header">
