@@ -5,8 +5,8 @@
 const projectsData = [  {
   id: 1,
   name: "Spec2Cov - LLM Hardware Verification",
-  description: "An agentic framework that uses Large Language Models to automate hardware verification by iteratively generating testbenches, simulating them, and achieving code coverage closure through intelligent feedback loops.",
-  tags: ["Hardware Verification", "LLM", "SystemVerilog", "Agentic AI", "Code Coverage", "Digital Design", "EDA Tools", "Research"],
+  description: "An agentic framework that uses LLMs to automate hardware verification by iteratively achieving code coverage closure through intelligent feedback loops.",
+  tags: ["Hardware Verification", "LLMs", "Agentic AI", "GraphRAG", "LangChain", "SFT"],
   link: "https://github.com/Vihaan004/LLM-Verification",
   imageUrl: "/project-images/llm-verif.png",
   isFeatured: true
@@ -14,7 +14,7 @@ const projectsData = [  {
   id: 2,
   name: "Data Den",
   description: "AI+RAG powered GPU Acceleration workspace for data science applications utilizing ASU Sol Supercomputer.",
-  tags: ["Agentic RAG", "LangGraph", "Ollama LLMs", "CUDA", "GPUs", "HPC", "NVIDIA Rapids"],
+  tags: ["Agentic RAG AI", "LangChain", "Ollama LLMs", "CUDA", "GPUs", "HPC", "NVIDIA Rapids"],
   link: "https://github.com/Vihaan004/data-den",
   imageUrl: "/project-images/data-den.png",
   isFeatured: true
