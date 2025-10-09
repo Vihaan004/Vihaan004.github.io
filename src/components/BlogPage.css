@@ -96,7 +96,7 @@
   margin: 0;
 }
 
-.blog-post-item:hover {
+.post-title:hover {
   color: var(--hover-text-color);
   text-decoration: underline;
 }
