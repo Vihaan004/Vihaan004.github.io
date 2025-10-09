@@ -112,25 +112,11 @@
     max-height: 0 !important;
 }
 
-@media (max-width: 900px) {
-    .Experience {
-        max-width: 98vw;
-        padding: 0 8px;
-    }
-    .experience-list {
-        max-width: 98vw;
-        padding: 0 8px;
-    }    .experience-block {
-        max-width: 100%;
-        min-height: auto; /* Allow natural height */
-    }
-}
 
 /* Additional mobile optimizations */
-@media (max-width: 480px) {
+@media (max-width: 900px) {
     .Experience {
         margin-top: 40px;
-        padding: 0 12px;
     }
       .experience-block {
         transition: background 0.2s, box-shadow 0.2s, max-height 0.2s ease-out;

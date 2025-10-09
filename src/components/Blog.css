@@ -26,9 +26,9 @@
     border-bottom: 1px solid transparent;
 }
 
-.view-all-link:hover {
+/* .view-all-link:hover {
     border-bottom: 1px solid var(--text-color);
-}
+} */
 
 .blog-list {
     display: flex;
@@ -114,12 +114,6 @@
 
 /* Mobile styles */
 @media (max-width: 768px) {
-    /* Keep blog header on same line for consistency with Projects section */
-    
-    .blog-post-header {
-        flex-direction: column;
-        gap: 8px;
-    }
     
     .post-meta {
         flex-wrap: wrap;

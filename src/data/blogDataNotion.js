@@ -37,7 +37,7 @@ const blogPosts = [
     id: 4,
     title: "Spec, Context, Prompt, Repeat",
     date: "October 8, 2025",
-    tags: ["AI", "Programming", "Reflection"],
+    tags: [],
     snippet: "A short reflection to compare the programmer I dreamed of five years ago with the programmer I'm shaping into right now.",
     isPinned: true,
     slug: "spec-context-prompt-repeat",

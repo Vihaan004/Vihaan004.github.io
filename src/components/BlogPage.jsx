@@ -57,7 +57,6 @@ function BlogPage() {
     <div className="blog-page content-width">
       <div className="blog-page-header">
         <h1>Blog</h1>
-        <div className="header-line" />
         <div className="blog-controls">
           <button className="sort-button" onClick={handleSortChange}>
             {getSortButtonText()}

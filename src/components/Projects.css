@@ -25,10 +25,6 @@
     border-bottom: 1px solid transparent;
 }
 
-.view-all-link:hover {
-    border-bottom: 1px solid var(--text-color);
-}
-
 /* Fix projects grid layout */
 .projects-list {
     display: grid;
@@ -189,7 +185,6 @@
 @media (max-width: 900px) {
     .Projects {
         max-width: 98vw;
-        padding: 0 16px;
     }
     .projects-list {
         grid-template-columns: 1fr;
@@ -201,7 +196,6 @@
 @media (max-width: 480px) {
     .Projects {
         margin-top: 40px;
-        padding: 0 12px;
     }
     
     .projects-header {

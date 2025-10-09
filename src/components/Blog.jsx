@@ -29,7 +29,6 @@ function Blog() {
         <div className="blog-tag">
           <h1>Blog</h1>
         </div>
-        <div className="header-line" />
         <Link to="/blog" className="view-all-link">
           View all posts 
           <div className="link-arrow">
