@@ -36,12 +36,12 @@ const blogPosts = [
     {
     id: 4,
     title: "Spec, Context, Prompt, Repeat",
-    date: "Ocotber 8, 2025",
-    tags: [],
+    date: "October 8, 2025",
+    tags: ["AI", "Programming", "Reflection"],
     snippet: "A short reflection to compare the programmer I dreamed of five years ago with the programmer I'm shaping into right now.",
     isPinned: true,
-    slug: "",
-    embedCode: '<iframe src="https://vihaanpatel.notion.site/ebd/2811e9cb48538009b242c7ab0b3a7926" width="100%" height="600" frameborder="0" allowfullscreen style="display: block; margin: 0; padding: 0;" />'
+    slug: "spec-context-prompt-repeat",
+    embedCode: '<iframe src="https://vihaanpatel.notion.site/ebd/2811e9cb48538009b242c7ab0b3a7926" width="100%" height="100%" frameborder="0" allowfullscreen style="display: block; margin: 0; padding: 0;" />'
   } 
 ];
 
