@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import Home from "./components/Home";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
@@ -54,6 +55,7 @@ function App() {
         <Route path="/blog/:slug" element={<BlogPostEmbedded />} />
         <Route path="/projects" element={<ProjectPage />} />
       </Routes>
+      <Analytics />
     </Router>
   );
 }
