@@ -45,24 +45,33 @@ const projectsData = [  {
   description: "A fully functional MIPS processor implementation with multicycle architecture on FPGA.",    tags: ["FPGA", "MIPS", "Computer Architecture", "Verilog"],
   link: "https://github.com/Vihaan004/mips-multicycle-processor",
   imageUrl: "/project-images/FPGA.jpg",
-  isFeatured: true
+  isFeatured: false
   },  {
   id: 7,
-  name: "Studiovistara - website",
+  name: "Website - Studiovistara",
   description: "A modern and sleek website design for Studiovistara, an architecture firm based in India.",
   tags: ["React", "CSS", "JavaScript", "Web Development"],
-  link: "https://github.com/Vihaan004/Vihaan004.github.io",
+  link: "https://www.studiovistara.com",
   imageUrl: "/project-images/studiovistara.png",
   isFeatured: true
   }, {
   id: 8,
-  name: "Personal Website",
+  name: "Website - Jeeya Patel",
+  description: "A web design for Jeeya Patel's Architecture Portfolio",
+  tags: ["React", "CSS", "JavaScript", "Web Development"],
+  link: "https://jeeyapatel.studio",
+  imageUrl: "/project-images/my-site.png",
+  isFeatured: false
+  }, {
+  id: 9,
+  name: "Website - Personal",
   description: "This website! Built with React and deployed on GitHub Pages.",
   tags: ["React", "CSS", "JavaScript", "Web Development"],
   link: "https://github.com/Vihaan004/Vihaan004.github.io",
   imageUrl: "/project-images/my-site.png",
   isFeatured: false
   }
+
 ];
 
 export default projectsData;
