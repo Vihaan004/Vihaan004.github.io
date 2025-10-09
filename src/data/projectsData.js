@@ -60,7 +60,7 @@ const projectsData = [  {
   description: "A web design for Jeeya Patel's Architecture Portfolio",
   tags: ["React", "CSS", "JavaScript", "Web Development"],
   link: "https://jeeyapatel.studio",
-  imageUrl: "/project-images/my-site.png",
+  imageUrl: "/project-images/jeeya-site.png",
   isFeatured: false
   }, {
   id: 9,
