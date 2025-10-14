@@ -87,10 +87,13 @@
     color: #666;
 }
 
-.post-tags {
+.post-tags-home {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+
+    /* temp */
+    display: none;
 }
 
 .post-tag-item {

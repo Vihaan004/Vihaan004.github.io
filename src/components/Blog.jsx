@@ -48,7 +48,7 @@ function Blog() {
               
               <div className="post-meta">
                 <div className="post-date">{post.date}</div>
-                <div className="post-tags">
+                <div className="post-tags-home">
                   {post.tags.map((tag, index) => (
                     <span key={index} className="post-tag-item">{tag}</span>
                   ))}
