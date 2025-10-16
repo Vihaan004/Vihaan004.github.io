@@ -11,6 +11,7 @@ import Music from "./components/Music";
 import BlogPostEmbedded from "./components/BlogPostEmbedded";
 import "./index.css";
 import Hero from "./components/Hero";
+import DarkModeToggle from "./components/DarkModeToggle";
 
 function MainPage() {
   const location = useLocation();
@@ -40,7 +41,7 @@ function MainPage() {
       <Blog />
       <Projects />
       <Experience />
-      <Music />
+      {/* <Music /> */}
     </>
   );
 }
@@ -49,6 +50,7 @@ function App() {
   return (
     <Router basename="/">
       <ScrollToTop />
+      <DarkModeToggle />
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/blog" element={<BlogPage />} />
