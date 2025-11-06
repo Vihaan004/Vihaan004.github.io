@@ -41,7 +41,7 @@ function MainPage() {
       <Blog />
       <Projects />
       <Experience />
-      {/* <Music /> */}
+      <Music />
     </>
   );
 }
