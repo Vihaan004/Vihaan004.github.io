@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Custom CUDA Kernels Bindings",
+    "link": "https://github.com/Vihaan004/custom-cuda-kernels-bindings",
+    "description": "Python bindings for custom <a href='https://developer.nvidia.com/cuda-toolkit'>CUDA</a> kernels",
+    "image": "/works/cuda.png"
+  },
+  {
+    "name": "Agentic AI for Hardware Design Verification",
+    "link": "",
+    "description": "Achieve coverage closure in design verification of sub-system and module level designs. Built with <a href='https://docs.langchain.com/oss/python/langgraph/overview'>LangGraph</a> and <a href='https://openai.com/api/'>OpenAI API</a>.",
+    "image": "/works/agentic-verif.png"
+  },
+  {
+    "name": "Collagent",
+    "link": "https://collagent.onrender.com",
+    "description": "An agent with custom tools for university data integration. Built with <a href='https://docs.langchain.com/oss/python/langgraph/overview'>LangGraph</a>. For students.",
+    "image": "/works/collagent.png",
+    "imageLink": "https://collagent.onrender.com"
+  },
+  {
+    "name": "Data Den",
+    "link": "https://github.com/Vihaan004/data-den",
+    "description": "A AI workspace to optimize data analytics tasks with GPU acceleration. Built with <a href='https://docs.langchain.com/oss/python/langchain/overview'>LangChain</a> utilizing <a href='https://asurc.atlassian.net/wiki/spaces/RC/overview'>SOL</a> supercomputer.",
+    "image": "/works/data-den.png",
+    "imageLink": "https://www.youtube.com/watch?v=Nsd1LR1E_A4"
+  },
+  {
+    "name": "Python Sandbox API",
+    "link": "https://github.com/Vihaan004/python-sandbox-api",
+    "description": "Sandboxed Python execution API. Built with <a href='https://github.com/google/nsjail'>nsjail</a> and Flask. Deployed on Google Cloud Run.",
+    "image": "/works/python-sandbox.png"
+  },
+  {
+    "name": "Medical Image Classification with DL",
+    "link": "https://github.com/Vihaan004/DL-MedMNIST",
+    "description": "Benchmarking on MedMNIST datasets using frameworks with ResNet architectures.",
+    "image": "/works/medmnist.png"
+  },
+  {
+    "name": "MIPS Multicycle Processor",
+    "link": "https://github.com/Vihaan004/mips-multicycle-processor",
+    "description": "A modular MIPS multicycle processor implementation focused on simulation, analysis, and educational exploration of processor design.",
+    "image": "/works/FPGA.jpg"
+  },
+  {
+    "name": "Matrix Multiplier",
+    "link": "https://github.com/Vihaan004/matrix-multiplier",
+    "description": "A Verilog-based systolic 4x4 matrix multiplier with integrated RAM, optimized for hardware design and computation.",
+    "image": "/works/matmul.png"
+  },
+  {
+    "name": "studiovistara.com",
+    "link": "https://www.studiovistara.com",
+    "description": "A modern and sleek website design for Studiovistara, an architecture firm based in India.",
+    "image": "/works/studiovistara.png",
+    "imageLink": "https://www.studiovistara.com"
+  },
+  {
+    "name": "vihaanpatel.me",
+    "link": "https://vihaanpatel.me",
+    "description": "Colors inspired by Claude (if you haven't already noticed). Blog powered by <a href='https://bearblog.dev/'>Bear blog</a>.",
+    "image": "/works/my-site.png",
+    "imageLink": "https://vihaanpatel.me"
+  },
+  {
+    "name": "jeeyapatel.studio",
+    "link": "https://jeeyapatel.studio",
+    "description": "A web page for Jeeya Patel's Architecture Portfolio",
+    "image": "/works/jeeya-site.png",
+    "imageLink": "https://jeeyapatel.studio"
+  },
+  {
+    "name": "jainampatel.vercel.app",
+    "link": "https://jainampatel.vercel.app",
+    "description": "A web page for Jainam Patel's Architecture Portfolio",
+    "image": "/works/jainam-site.png",
+    "imageLink": "https://jainampatel.vercel.app"
+  }
+
+]
+
