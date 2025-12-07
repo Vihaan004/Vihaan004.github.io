@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Image from "next/image";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/react";
 import ThemeToggle from "./components/ThemeToggle";
 import github from "@/public/github.svg";
 import linkedin from "@/public/linkedin.svg";
@@ -62,6 +63,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
