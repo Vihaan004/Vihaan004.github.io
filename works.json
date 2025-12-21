@@ -38,6 +38,12 @@
     "image": "/works/medmnist.png"
   },
   {
+    "name": "The Passive-Aggressive Shell",
+    "link": "https://github.com/Vihaan004/passive-aggressive-shell",
+    "description": "A sarcastic Linux shell coupled with an LLM that roasts invalid commands, provides helpful (but snarky) assistance for failed commands, and offers guidance on Linux utilities.",
+    "image": "/works/PA-shell.png"
+  },
+  {
     "name": "MIPS Multicycle Processor",
     "link": "https://github.com/Vihaan004/mips-multicycle-processor",
     "description": "A modular MIPS multicycle processor implementation focused on simulation, analysis, and educational exploration of processor design.",
