@@ -7,7 +7,7 @@ export default function Home() {
       <ul>
         <li>Spec2Cov - an agentic framework for hardware design verification</li>
         <li>Collagent - THE AI agent for college students</li>
-        <li>PA-shell - A 'passive agressive' linux shell with an sneaky LLM underneath</li>
+        <li>PA-shell - A 'passive agressive' linux shell with a sneaky LLM underneath</li>
       </ul>
       <p></p>
     </main>
