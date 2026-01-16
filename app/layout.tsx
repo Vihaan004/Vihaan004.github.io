@@ -28,7 +28,8 @@ function Header () {
       <nav>
         <p>
           <a href="/">home</a>
-          <a href="https://vihaanpatel.bearblog.dev/">blog</a>
+          {/* <a href="https://vihaanpatel.bearblog.dev/">blog</a> */}
+          <a href="/blog">blog</a>
           <a href="/works">works</a>
           <a href="/timeline">timeline</a>
           <a href="/music">music</a>

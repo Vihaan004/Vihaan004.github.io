@@ -6,8 +6,7 @@ export default function Home() {
       <p>Currently working on:</p>
       <ul>
         <li>Spec2Cov - an agentic framework for hardware design verification</li>
-        <li>Collagent - THE AI agent for college students</li>
-        <li>PA-shell - A 'passive agressive' linux shell with a sneaky LLM underneath</li>
+        <li><a href="https://collagent.onrender.com">Collagent</a> - THE AI agent for college students</li>
       </ul>
       <p></p>
     </main>

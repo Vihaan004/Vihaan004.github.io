@@ -1,5 +1,5 @@
 import Image from "next/image";
-import works from "@/works.json";
+import works from "@/content/works/works.json";
 
 interface Work {
     name: string;
