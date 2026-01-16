@@ -21,7 +21,7 @@
   {
     "name": "Data Den",
     "link": "https://github.com/Vihaan004/data-den",
-    "description": "A AI workspace to optimize data analytics tasks with GPU acceleration. Built with <a href='https://docs.langchain.com/oss/python/langchain/overview'>LangChain</a> utilizing <a href='https://asurc.atlassian.net/wiki/spaces/RC/overview'>SOL</a> supercomputer.",
+    "description": "An AI workspace to optimize data analytics tasks with GPU acceleration. Built with <a href='https://docs.langchain.com/oss/python/langchain/overview'>LangChain</a> utilizing <a href='https://asurc.atlassian.net/wiki/spaces/RC/overview'>SOL</a> supercomputer.",
     "image": "/works/data-den.png",
     "imageLink": "https://www.youtube.com/watch?v=Nsd1LR1E_A4"
   },

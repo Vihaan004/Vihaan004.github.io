@@ -27,12 +27,12 @@ function Header () {
       <ThemeToggle />
       <nav>
         <p>
-          <a href="/">home</a>
+          <Link href="/">home</Link>
           {/* <a href="https://vihaanpatel.bearblog.dev/">blog</a> */}
-          <a href="/blog">blog</a>
-          <a href="/works">works</a>
-          <a href="/timeline">timeline</a>
-          <a href="/music">music</a>
+          <Link href="/blog">blog</Link>
+          <Link href="/works">works</Link>
+          <Link href="/timeline">timeline</Link>
+          <Link href="/music">music</Link>
         </p>
       </nav>
     </div>
@@ -59,7 +59,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(() => {
+  try {
+    const theme = sessionStorage.getItem('theme');
+    if (theme === 'light' || theme === 'dark') {
+      document.documentElement.classList.remove('light', 'dark');
+      document.documentElement.classList.add(theme);
+    }
+  } catch {}
+})();`,
+          }}
+        />
+      </head>
       <body>
         <Header />
         {children}
