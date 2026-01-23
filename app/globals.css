@@ -1,7 +1,9 @@
 html {
     --width: 720px;
-    --font-main: Verdana, sans-serif;
-    --font-secondary: Verdana, sans-serif;
+    /* --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif; */
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-secondary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --font-scale: 1em;
     --background-color: #f4f3ee;
     --heading-color: #222;
@@ -29,11 +31,11 @@ html {
 }
 
 html.dark {
-    --background-color: #262624;
+    --background-color: #1f1e1d;
     --heading-color: #eee;
-    --text-color: #cccbc4;
+    --text-color: #d4d2c9;
     --link-color: #c15f3c;
-    --visited-color:  #b1ada1;
+    --visited-color:  #d4d2c9;
     --code-background-color: #000;
     --code-color: #ddd;
     --blockquote-color: #ccc;
@@ -41,20 +43,23 @@ html.dark {
 }
 
 html.light {
-    --background-color: #f4f3ee;
+    --background-color: #f0eee6;
     --heading-color: #222;
-    --text-color: #444;
+    --text-color: #1f1e1d;
     --link-color: #c15f3c;
-    --visited-color:  #b1ada1;
+    --visited-color:  #1f1e1d;
     --code-background-color: #f2f2f2;
     --code-color: #222;
     --blockquote-color: #222;
     --icon-filter: brightness(0) saturate(100%) invert(27%) sepia(8%) saturate(500%);
 }
 
-::selection {
-    background-color: var(--text-color);
-    color: var(--background-color);
+html.light ::selection {
+    background-color: #b2caec;
+}
+
+html.dark ::selection {
+    background-color: #173057;
 }
 
 ::-moz-selection {
@@ -104,6 +109,7 @@ body {
     background-color: var(--background-color);
     word-wrap: break-word;
     overflow-wrap: break-word;
+    letter-spacing: 0.3px;
     line-height: 1.5;
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
