@@ -5,6 +5,7 @@ import matter from "gray-matter";
 export type BlogFrontMatter = {
   title: string;
   date: string; // YYYY-MM-DD
+  description?: string;
   draft?: boolean;
 };
 
@@ -12,6 +13,7 @@ export type BlogPostMeta = {
   slug: string;
   title: string;
   date: string;
+  description?: string;
   draft: boolean;
   dateObj: Date;
 };
@@ -64,6 +66,7 @@ export async function getAllBlogPostsMeta(options?: {
 
       const title = typeof data.title === "string" ? data.title : undefined;
       const date = typeof data.date === "string" ? data.date : undefined;
+      const description = typeof data.description === "string" ? data.description : undefined;
       const draft = Boolean(data.draft);
 
       if (!title) throw new Error(`Missing 'title' front matter in '${slug}'.`);
@@ -71,7 +74,7 @@ export async function getAllBlogPostsMeta(options?: {
 
       const dateObj = parseDateOrThrow(date, slug);
 
-      return { slug, title, date, draft, dateObj } satisfies BlogPostMeta;
+      return { slug, title, date, description, draft, dateObj } satisfies BlogPostMeta;
     })
   );
 
@@ -94,6 +97,7 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost> {
 
   const title = typeof data.title === "string" ? data.title : undefined;
   const date = typeof data.date === "string" ? data.date : undefined;
+  const description = typeof data.description === "string" ? data.description : undefined;
   const draft = Boolean(data.draft);
 
   if (!title) throw new Error(`Missing 'title' front matter in '${slug}'.`);
@@ -101,5 +105,5 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost> {
 
   const dateObj = parseDateOrThrow(date, slug);
 
-  return { slug, title, date, draft, dateObj, content };
+  return { slug, title, date, description, draft, dateObj, content };
 }

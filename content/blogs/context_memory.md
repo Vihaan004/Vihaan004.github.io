@@ -1,6 +1,7 @@
 ---
-title: "context > memory"
+title: "Context vs Memory"
 date: "2025-12-10"
+description: "Exploring the distinction between context and memory management in AI agents." 
 draft: false
 ---
 

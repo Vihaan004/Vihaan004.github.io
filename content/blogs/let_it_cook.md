@@ -1,6 +1,7 @@
 ---
-title: "let it cook (agentic AI)"
+title: "Let it Cook (AI Agents)"
 date: "2025-05-25"
+description: "Exploring the rise of agentic AI in software development, with a focus on GitHub Copilot and Microsoft's vision for an open agentic web."
 draft: false
 ---
 

@@ -1,6 +1,7 @@
 ---
-title: "spec, context, prompt, repeat"
+title: "Spec, Context, Prompt, Repeat"
 date: "2025-10-07"
+description: "Exploring the iterative cycle of specification, context engineering, prompting, and refinement in AI-driven development workflows."
 draft: false
 ---
 

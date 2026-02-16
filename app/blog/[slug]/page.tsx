@@ -46,6 +46,7 @@ export default async function BlogPostPage(props: {
       <p>
         <time dateTime={post.date}>{formatBlogDate(post.dateObj)}</time>
       </p>
+      {post.description && <p><em>{post.description}</em></p>}
       <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
     </main>
   );
