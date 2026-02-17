@@ -157,6 +157,7 @@ a:hover {
 
 nav a {
     margin-right: 16px;
+    white-space: nowrap; /* Prevent words from breaking mid-word */
 }
 
 .theme-toggle {
@@ -168,7 +169,7 @@ nav a {
     color: var(--text-color);
     float: right;
     position: relative;
-    top: -45px;
+    top: -50px;
 }
 
 strong, b {
@@ -270,6 +271,7 @@ ul.blog-posts li a:visited {
 
 .work-image {
     /* flex-shrink: 0; */
+    position: relative;
     width: 160px;
     height: 100px;
     overflow: hidden;
@@ -295,4 +297,18 @@ ul.blog-posts li a:visited {
 .repo-card p {
     margin: 0;
     color: var(--text-color);
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    /* Stack work cards vertically with image on top */
+    .repo-card {
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+    .work-image {
+        width: 100%;
+        height: 200px;
+    }
 }

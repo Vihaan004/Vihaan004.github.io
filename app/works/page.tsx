@@ -24,16 +24,16 @@ export default function Works() {
                                         <Image 
                                             src={work.image} 
                                             alt={work.name}
-                                            width={80}
-                                            height={80}
+                                            fill
+                                            style={{ objectFit: 'cover' }}
                                         />
                                     </a>
                                 ) : (
                                     <Image 
                                         src={work.image} 
                                         alt={work.name}
-                                        width={80}
-                                        height={80}
+                                        fill
+                                        style={{ objectFit: 'cover' }}
                                     />
                                 )}
                             </div>

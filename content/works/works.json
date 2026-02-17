@@ -1,15 +1,15 @@
 [
   {
-    "name": "Custom CUDA Kernels Bindings",
-    "link": "https://github.com/Vihaan004/custom-cuda-kernels-bindings",
-    "description": "Python bindings for custom <a href='https://developer.nvidia.com/cuda-toolkit'>CUDA</a> kernels",
-    "image": "/works/cuda.png"
-  },
-  {
     "name": "Agentic AI for Hardware Design Verification",
-    "link": "",
+    "link": "/blog/agentic_ai_in_dv",
     "description": "Achieve coverage closure in design verification of sub-system and module level designs. Built with <a href='https://docs.langchain.com/oss/python/langgraph/overview'>LangGraph</a> and <a href='https://openai.com/api/'>OpenAI API</a>.",
     "image": "/works/agentic-verif.png"
+  },
+  {
+    "name": "Custom CUDA Kernels Bindings",
+    "link": "https://github.com/Vihaan004/custom-cuda-kernels-bindings",
+    "description": "Python bindings for custom <a href='https://developer.nvidia.com/cuda-toolkit'>CUDA</a> kernels.",
+    "image": "/works/cuda.png"
   },
   {
     "name": "Collagent",
@@ -40,13 +40,13 @@
   {
     "name": "The Passive-Aggressive Shell",
     "link": "https://github.com/Vihaan004/passive-aggressive-shell",
-    "description": "A sarcastic Linux shell coupled with an LLM that roasts invalid commands, provides helpful (but snarky) assistance for failed commands, and offers guidance on Linux utilities.",
+    "description": "A sarcastic Linux shell integrated with an LLM, provides snarky assistance for invalid commands, and offers guidance on utilities.",
     "image": "/works/PA-shell.png"
   },
   {
     "name": "MIPS Multicycle Processor",
     "link": "https://github.com/Vihaan004/mips-multicycle-processor",
-    "description": "A modular MIPS multicycle processor implementation focused on simulation, analysis, and educational exploration of processor design.",
+    "description": "A modular MIPS multicycle processor implementation focused on simulation, analysis, and exploration of processor design.",
     "image": "/works/FPGA.jpg"
   },
   {
