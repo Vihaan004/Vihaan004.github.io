@@ -6,7 +6,7 @@ export default function Home() {
       <p>Currently working on:</p>
       <ul>
         <li><a href="/blog/agentic_ai_in_dv">Agentic framework for hardware design verification</a></li>
-        <li><a href="https://collagent.onrender.com">Collagent - the agent for college students</a></li>
+        <li><a href="/blog/collagent">Collagent - the agent for college students</a></li>
       </ul>
       <p></p>
     </main>
