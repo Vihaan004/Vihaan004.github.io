@@ -41,6 +41,10 @@ We're also exploring coverage-guided strategies inspired by ensemble learning: t
 
 Hardware verification has always been a human-intensive, iteration-heavy process. The hypothesis we're testing is that a well-structured team of AI agents, each with a clear role, access to the right tools, and grounded by simulator feedback, can compress that iteration cycle from weeks to hours. Not by replacing verification engineers, but by handling the mechanical grind of coverage closure so engineers can focus on what they're best at: finding the bugs that no coverage metric would catch.
 
+## Interim Evaluation Report
+
+We've run CovAgent's ReAct framework head-to-head against Codex CLI across 4 open-source hardware designs (ChaCha20, Ethernet MAC, TRNG, SD Card Controller). Check out this [detailed evaluation report](/works/covagent-report), it covers per-design coverage results, token efficiency, a taxonomy of residual coverage holes, and analysis of where LLM-driven stimulus generation fundamentally hits its limits.
+
 ---
 
 *This project is part of ongoing research at Arizona State University's ADVENT Lab, under Dr. Aman Arora. Contact vpatel69@asu.edu for more information.*

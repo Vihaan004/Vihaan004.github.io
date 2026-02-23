@@ -1,0 +1,438 @@
+/* ── report page styles ──
+   Uses site CSS variables from globals.css for theme compatibility */
+
+.report {
+  line-height: 1.75;
+}
+
+.report h1 {
+  font-size: 1.5em;
+  margin-bottom: 4px;
+}
+
+.report-subtitle {
+  color: var(--text-color);
+  font-size: 0.85em;
+  margin: 0 0 2px;
+}
+
+.report-meta {
+  color: var(--visited-color);
+  font-size: 0.75em;
+  font-family: monospace;
+  margin: 0 0 12px;
+}
+
+.legend {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 8px;
+  font-size: 0.8em;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.legend-dot.react {
+  background: #5b8dd9;
+}
+
+.legend-dot.codex {
+  background: #5dab8a;
+}
+
+/* ── color classes ── */
+
+.color-react {
+  color: #5b8dd9;
+}
+
+.color-codex {
+  color: #5dab8a;
+}
+
+.color-warn {
+  color: var(--link-color);
+}
+
+/* ── stat row ── */
+
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.stat-cell {
+  border: 1px dashed var(--visited-color);
+  border-radius: 4px;
+  padding: 14px 10px;
+  text-align: center;
+}
+
+.stat-label {
+  font-size: 0.65em;
+  font-family: monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--visited-color);
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-family: monospace;
+  font-size: 1.35em;
+  font-weight: 700;
+}
+
+.stat-sub {
+  font-size: 0.7em;
+  color: var(--visited-color);
+  margin-top: 2px;
+}
+
+/* ── charts grid (CSS bar charts) ── */
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.chart-card {
+  border: 1px dashed var(--visited-color);
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.chart-card h4 {
+  font-size: 0.8em;
+  margin: 0 0 14px;
+  font-weight: 600;
+}
+
+.chart-group {
+  margin-bottom: 14px;
+}
+
+.chart-group:last-child {
+  margin-bottom: 0;
+}
+
+.chart-design-label {
+  display: block;
+  font-family: monospace;
+  font-size: 0.7em;
+  color: var(--visited-color);
+  margin-bottom: 4px;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 3px;
+}
+
+.bar-label {
+  font-size: 0.65em;
+  font-family: monospace;
+  width: 38px;
+  flex-shrink: 0;
+  color: var(--visited-color);
+}
+
+.bar-track {
+  flex: 1;
+  height: 10px;
+  background: var(--code-background-color);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+.bar-react {
+  background: #5b8dd9;
+}
+
+.bar-codex {
+  background: #5dab8a;
+}
+
+.bar-value {
+  font-size: 0.7em;
+  font-family: monospace;
+  width: 64px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* ── design cards ── */
+
+.design-card {
+  border: 1px dashed var(--visited-color);
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.design-card h3 {
+  font-family: monospace;
+  font-size: 1em;
+  margin: 0 0 2px;
+}
+
+.design-desc {
+  font-size: 0.8em;
+  color: var(--visited-color);
+  margin: 0 0 16px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.metric-pair {
+  display: flex;
+  gap: 8px;
+}
+
+.metric-box {
+  flex: 1;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.metric-box.react {
+  background: rgba(91, 141, 217, 0.08);
+  border: 1px solid rgba(91, 141, 217, 0.2);
+}
+
+.metric-box.codex {
+  background: rgba(93, 171, 138, 0.08);
+  border: 1px solid rgba(93, 171, 138, 0.2);
+}
+
+.metric-label {
+  font-size: 0.6em;
+  font-family: monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--visited-color);
+  margin-bottom: 2px;
+}
+
+.metric-value {
+  font-family: monospace;
+  font-size: 1.15em;
+  font-weight: 700;
+}
+
+.metric-sub {
+  font-size: 0.65em;
+  color: var(--visited-color);
+  margin-top: 1px;
+}
+
+/* ── holes ── */
+
+.holes {
+  margin-top: 16px;
+}
+
+.holes h4 {
+  font-size: 0.8em;
+  color: var(--visited-color);
+  margin-bottom: 8px;
+}
+
+.hole {
+  margin-bottom: 10px;
+}
+
+.hole p {
+  font-size: 0.8em;
+  color: var(--text-color);
+  padding-left: 12px;
+  border-left: 2px solid var(--visited-color);
+  margin: 6px 0 0;
+  line-height: 1.6;
+}
+
+.hole-tag {
+  display: inline-block;
+  font-family: monospace;
+  font-size: 0.65em;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+
+.hole-tag.unreachable {
+  background: rgba(200, 60, 60, 0.12);
+  color: #c15f3c;
+}
+
+.hole-tag.needs-effort {
+  background: rgba(193, 95, 60, 0.12);
+  color: var(--link-color);
+}
+
+.hole-tag.excludable {
+  background: var(--code-background-color);
+  color: var(--visited-color);
+}
+
+/* ── taxonomy table ── */
+
+.taxonomy-table-wrap {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.report table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8em;
+}
+
+.report table th {
+  text-align: left;
+  font-family: monospace;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--visited-color);
+  padding: 8px 10px;
+  border-bottom: 2px dashed var(--visited-color);
+}
+
+.report table td {
+  padding: 8px 10px;
+  border-bottom: 1px dashed var(--visited-color);
+  vertical-align: top;
+  line-height: 1.55;
+}
+
+.report table tr:last-child td {
+  border-bottom: none;
+}
+
+/* ── insights ── */
+
+.insights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.insight {
+  border: 1px dashed var(--visited-color);
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.insight-num {
+  font-family: monospace;
+  font-size: 0.65em;
+  font-weight: 600;
+  color: var(--link-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.insight h4 {
+  font-size: 0.9em;
+  margin: 0 0 8px;
+}
+
+.insight p {
+  font-size: 0.8em;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── section intro ── */
+
+.section-intro {
+  font-size: 0.85em;
+  color: var(--visited-color);
+  margin-bottom: 16px;
+}
+
+/* ── callout ── */
+
+.report blockquote {
+  border-left: 3px solid var(--link-color);
+  padding: 12px 16px;
+  margin: 16px 0;
+  font-style: normal;
+  font-size: 0.85em;
+  line-height: 1.65;
+  background: var(--code-background-color);
+  border-radius: 0 4px 4px 0;
+}
+
+.report blockquote.callout-danger {
+  border-left-color: #c15f3c;
+}
+
+.report blockquote strong {
+  color: var(--link-color);
+}
+
+/* ── generalization section ── */
+
+.report h4 {
+  font-size: 0.95em;
+  margin: 20px 0 6px;
+}
+
+.report > p {
+  font-size: 0.85em;
+  margin-bottom: 14px;
+}
+
+/* ── responsive ── */
+
+@media screen and (max-width: 768px) {
+  .stat-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .insights {
+    grid-template-columns: 1fr;
+  }
+}
