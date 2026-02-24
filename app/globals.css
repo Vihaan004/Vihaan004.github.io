@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
 html {
     --width: 720px;
-    /* --font-main: Verdana, sans-serif;
-    --font-secondary: Verdana, sans-serif; */
+    /* --font-main: Verdana, sans-serif; */
     --font-main: Verdana, sans-serif;
-    --font-secondary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* --font-secondary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    --font-secondary: 'Lexend', sans-serif;
     --font-scale: 1.1em;
     --background-color: #f4f3ee;
     --heading-color: #222;
@@ -102,6 +104,7 @@ html {
 body {
     font-family: var(--font-secondary);
     font-size: var(--font-scale);
+    font-weight: 400;
     margin: auto;
     padding: 20px;
     max-width: var(--width);
@@ -109,7 +112,7 @@ body {
     background-color: var(--background-color);
     word-wrap: break-word;
     overflow-wrap: break-word;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.2px;
     line-height: 1.5;
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
