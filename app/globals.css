@@ -241,6 +241,33 @@ footer {
     overflow-x: auto;
 }
 
+.mermaid-diagram {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+}
+
+.mermaid-diagram-inner {
+    min-width: max-content;
+}
+
+.mermaid-diagram-inner svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.mermaid-fallback {
+    padding: 1px 15px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+}
+
 /* blog post list */
 ul.blog-posts {
     list-style-type: none;

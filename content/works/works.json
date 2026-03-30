@@ -1,10 +1,9 @@
 [
   {
-    "name": "Agentic AI for Hardware Design Verification",
+    "name": "Agentic AI in Hardware Design Verification",
     "link": "/blog/agentic-ai-in-dv",
-    "description": "Achieve coverage closure in design verification of sub-system and module level designs. Built with <a href='https://docs.langchain.com/oss/python/langgraph/overview'>LangGraph</a> and <a href='https://openai.com/api/'>OpenAI API</a>.",
-    "image": "/works/agentic-verif.png",
-    "imageLink": "/works/covagent-report"
+    "description": "Achieve coverage closure in design verification of sub-system and module level designs. Built with <a href='https://docs.langchain.com/oss/python/langgraph/overview'>LangGraph</a>.",
+    "image": "/works/covagent.png"
   },
   {
     "name": "Custom CUDA Kernels Bindings",

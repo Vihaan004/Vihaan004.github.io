@@ -24,6 +24,10 @@ export type BlogPost = BlogPostMeta & {
 
 const BLOG_DIR = path.join(process.cwd(), "content", "blogs");
 
+function stripHtmlComments(markdown: string): string {
+  return markdown.replace(/<!--([\s\S]*?)-->/g, "");
+}
+
 function parseDateOrThrow(date: string, slug: string): Date {
   const parsed = new Date(date);
   if (Number.isNaN(parsed.getTime())) {
@@ -105,5 +109,5 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost> {
 
   const dateObj = parseDateOrThrow(date, slug);
 
-  return { slug, title, date, description, draft, dateObj, content };
+  return { slug, title, date, description, draft, dateObj, content: stripHtmlComments(content) };
 }
