@@ -5,6 +5,8 @@ description: "Exploring the use of multi-agent AI systems to autonomously close 
 draft: false
 ---
 
+> arXiv publication: [Understanding Inference-Time Token Allocation and Coverage Limits in Agentic Hardware Verification](https://arxiv.org/abs/2604.15657)
+
 Chip verification is where schedules go to die. A design can be architecturally brilliant, pass every code review, and still spend months stuck in a loop of testbench refinement, coverage analysis, and "why isn't this branch getting hit?" According to the [2024 Wilson Research Group study](https://blogs.sw.siemens.com/verificationhorizons/2025/09/03/why-first-silicon-success-is-getting-harder-for-system-companies/), 60-70% of engineering effort in chip projects goes to verification, and only 14% of ASIC/SoC projects achieved first-silicon success last year. The bottleneck isn't writing tests. It's closing coverage.
 
 We built [CovAgent](https://github.com/AAISHAA/CovAgent) to do this autonomously. It's an agentic framework that reads a design specification, generates SystemVerilog testbenches, runs simulations, parses coverage reports, and iterates. No human in the loop. The goal: full code coverage closure, driven by LLM-powered agents orchestrated through [LangGraph](https://github.com/langchain-ai/langgraph).

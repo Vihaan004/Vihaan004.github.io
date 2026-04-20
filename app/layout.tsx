@@ -31,7 +31,7 @@ function Header () {
           {/* <a href="https://vihaanpatel.bearblog.dev/">blog</a> */}
           <Link href="/blog">blog</Link>
           <Link href="/works">works</Link>
-          <Link href="/timeline">timeline</Link>
+          {/* <Link href="/timeline">timeline</Link> */}
           <Link href="/music">music</Link>
         </p>
       </nav>
