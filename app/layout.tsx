@@ -48,7 +48,7 @@ function Footer () {
         <Link href="https://github.com/Vihaan004"><Image src={github} alt="github"/></Link>
         <Link href="https://www.linkedin.com/in/vihaanpatel/"><Image src={linkedin} alt="linkedin"/></Link>
         <Link href="mailto:vihaan004@gmail.com"><Image src={email} alt="email"/></Link>
-        <Link href="https://www.instagram.com/vihaan.004/"><Image src={instagram} alt="instagram"/></Link>
+        {/* <Link href="https://www.instagram.com/vihaan.004/"><Image src={instagram} alt="instagram"/></Link> */}
         <Link href="https://open.spotify.com/user/n7edezqm12qvmml7mktlo0iry?si=d7425dcc63f84239"><Image src={spotify} alt="spotify"/></Link>
       </div>
     </div>

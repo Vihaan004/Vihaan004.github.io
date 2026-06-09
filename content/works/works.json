@@ -1,8 +1,8 @@
 [
   {
-    "name": "Agentic AI in Hardware Design Verification",
+    "name": "CovAgent",
     "link": "/blog/agentic-ai-in-dv",
-    "description": "Achieve coverage closure in design verification of sub-system and module level designs. Built with <a href='https://docs.langchain.com/oss/python/langgraph/overview'>LangGraph</a>.",
+    "description": "An agent orchestration for stimulus generation in RTL verification of sub-system and module level hardware designs. Built with <a href='https://docs.langchain.com/oss/python/langgraph/overview'>LangGraph</a> and Questa Sim.",
     "image": "/works/covagent.png"
   },
   {

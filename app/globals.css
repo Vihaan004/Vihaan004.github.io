@@ -3,7 +3,7 @@
 html {
     --width: 720px;
     /* --font-main: Verdana, sans-serif; */
-    --font-main: Verdana, sans-serif;
+    --font-secondary: 'Lexend', sans-serif;
     /* --font-secondary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     --font-secondary: 'Lexend', sans-serif;
     --font-scale: 1.1em;
@@ -104,7 +104,7 @@ html {
 body {
     font-family: var(--font-secondary);
     font-size: var(--font-scale);
-    font-weight: 400;
+    font-weight: 300;
     margin: auto;
     padding: 20px;
     max-width: var(--width);
@@ -302,6 +302,7 @@ ul.blog-posts li a:visited {
 .work-image {
     /* flex-shrink: 0; */
     position: relative;
+    margin:auto;
     width: 160px;
     height: 100px;
     overflow: hidden;
@@ -321,12 +322,13 @@ ul.blog-posts li a:visited {
 .repo-card h4 {
     margin: 0;
     font-size: 1em;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .repo-card p {
     margin: 0;
     color: var(--text-color);
+    line-height: 1.4;
 }
 
 /* Mobile styles */
