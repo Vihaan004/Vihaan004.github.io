@@ -1,5 +1,5 @@
 ---
-title: "Road to Collagent"
+title: "road to collagent"
 date: "2026-02-22"
 description: "Building an agentic AI layer that unifies Canvas, institutional websites, campus events, career resources, and more into a single conversational interface for students."
 draft: false

@@ -1,5 +1,5 @@
 ---
-title: "Agentic AI in Hardware Design Verification"
+title: "agentic AI in hardware design verification"
 date: "2026-01-26"
 description: "Exploring the use of multi-agent AI systems to autonomously close coverage gaps in hardware verification, leveraging LLMs and LangGraph for orchestration."
 draft: false

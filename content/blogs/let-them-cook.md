@@ -1,11 +1,11 @@
 ---
-title: "Let it Cook (AI Agents)"
+title: "let them cook"
 date: "2025-05-25"
-description: "Exploring the rise of agentic AI in software development, with a focus on GitHub Copilot and Microsoft's vision for an open agentic web."
-draft: false
+description: "Exploring the rise of agentic AI in software development, starring GitHub Copilot and Microsoft's vision for an open agentic web."
+draft: true
 ---
 
-You're probably thinking how does this hardware guy have such a neat website? The answer to that is what anyone would think to be obvious, generative AI.
+I deployed this website in under 5 minutes. I cooked. Or did I?
 
 However, a generative AI that builds entire apps, does multi-step coding, analyzes and modifies your entire codebase for you with a single prompt is something we need to talk about. Say hello to the natural language programmer.
 
