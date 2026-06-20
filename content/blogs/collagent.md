@@ -1,17 +1,17 @@
 ---
 title: "road to collagent"
 date: "2026-02-22"
-description: "Building an agentic AI layer that unifies Canvas, institutional websites, campus events, career resources, and more into a single conversational interface for students."
+description: "Building an AI layer that unifies Canvas LMS, institutional websites, campus events, career resources, network and more into a single personalized interface for students."
 draft: false
 ---
 
-Somewhere right now, a college student is trying to figure out when finals week starts. They open their university's student portal. It redirects to a login page. They authenticate, click through three navigation menus, land on the academic calendar, and scroll past two semesters of dates they don't care about to find the one they do. Total time: four minutes. Cognitive cost: one more reason to not bother checking next time.
+Somewhere right now, a college student is trying to figure out interesting elective to enroll for. They open their university's student portal, navigate to their program requirements page, see a list of 100s of possible electives, click through many, read a few syllabi, and finally settle on a choice, already excited to learn. Then navigate to class search, only to find out the class isn’t offered this semester. Bummer.  
 
-This is not a technology problem. Universities have the data. They have calendars, course catalogs, assignment systems, event listings, career portals, advising tools. The problem is that all of it lives in separate systems, behind separate logins, designed by separate committees, none of which talk to each other. The student is the integration layer. And they're not great at it. Not because they're lazy, but because nobody is great at being a human API gateway between twelve disconnected services.
+This is not a technology problem. Universities have the data. They have calendars, course catalogs, assignment systems, event listings, career portals, advising tools. The problem is that all of it lives in separate systems, behind separate logins, designed by separate departments, none of which talk to each other. The student is the integration layer. And they're not great at it. Not because they're lazy, but because nobody is great at being a human API gateway between twelve disconnected services. Especially students with neurodivergent conditions. 
 
-I'm building Collagent: a conversational AI agent that sits on top of a university's entire digital ecosystem. One chat interface. You ask it when finals are, it tells you. You ask what's due this week across all your classes, it checks Canvas, and gives you a prioritized list. You ask about career fairs, it searches your institution's event listings. The agent has the tools. You get the answers.
+That got me thinking about what I call Collagent. An interface that sits on top of a university's entire digital ecosystem. One chat interface coupled with personalized surfaces for domains like news, people, events, etc. You ask it when finals are, it tells you. You ask what's due this week across all your classes, it checks Canvas, and gives you a prioritized list. You ask about career fairs, it searches your institution's event listings. You ask about people to connect with, it finds the researcher working on the same passion as yours. The agent has the data and the tools. You get the answers. Simple to think about, harder to build. 
 
-A fair objection: doesn't this just atrophy the student's executive function? If an agent handles the operational overhead, do students lose the muscle for managing complexity themselves? Maybe. But AI is already on track to be embedded in every workplace and workflow students will enter after graduation. The executive function worth developing isn't "remember to check six portals before Tuesday." It's critical thinking, creative problem-solving, and deep domain knowledge. Collagent doesn't remove the hard parts of being a student. It removes the tedious ones so there's more room for the hard parts.
+A fair objection: doesn't this just atrophy the student's executive function? If an agent handles the operational overhead, do students lose the muscle for managing complexity themselves? Maybe. But AI is already on track to be embedded in every workplace and workflow students will enter after graduation. The executive function worth developing isn't "remember to check six portals before Tuesday." It's critical thinking, creative problem-solving, and deep domain knowledge. Collagent doesn't remove all hard parts of being a student. It removes the tedious ones so there's more room for the challenging, rewarding parts.
 
 ## The Landscape: Solving the Wrong Half
 
@@ -23,7 +23,7 @@ On the LMS side, Instructure (Canvas's parent company) has started embedding AI 
 
 Then there's the grassroots signal. On GitHub, at least five independent developers have recently built MCP servers connecting LLMs to Canvas ([r-huijts](https://github.com/r-huijts/canvas-mcp), [vishalsachdev](https://github.com/vishalsachdev/canvas-mcp) with 80+ tools, [DMontgomery40](https://github.com/DMontgomery40/mcp-canvas-lms) with 54 tools). Multiple people, independently, building the same thing. That's not a coincidence. That's a pain point screaming to be addressed.
 
-The gap: no one is building a unified, student-initiated conversational layer across *all* campus systems. Not just your LMS. Your entire university.
+The gap: no one is building a unified, student-faced conversational layer across *all* campus systems. Not just your LMS. Your entire university, queryable
 
 ## Why This Actually Matters
 
@@ -35,32 +35,34 @@ Gloria Mark's research at UC Irvine shows that every context switch between apps
 
 57% of students in the Pathify survey said their institution's digital experience causes them stress. For 41% of them, it negatively affects their ability to learn. The tools meant to support education are actively undermining it through poor integration.
 
-## The Agent Architecture: Tools, Not Magic
 
-Collagent isn't a chatbot with a personality and a knowledge base. It's an executive agent with tools. The distinction matters.
+## Agent, Tools, and Data, not Magic (but feels like it)
 
-Anthropic's "[Building Effective Agents](https://www.anthropic.com/research/building-effective-agents)" guide draws a useful line: a *workflow* is an LLM following a predefined path. An *agent* dynamically decides what to do based on the situation, planning, using tools, observing results, and adjusting. Collagent is the latter. When a student asks "What do I have due this week?", the agent doesn't look up a cached answer. It reasons through a plan: get the course list from Canvas, fetch assignments for each active course, filter by due date, convert timestamps to the student's timezone, and present a summary. Each step is a tool call. Each result is real data from a real system.
+An agent is something you delegate a task to. Collagent is something bigger and simpler: an interface managed by the agent.  
 
-The architecture is a single agent with a broad toolkit, not a swarm of specialized sub-agents. For an interactive, user-facing product, this is the right call. Multi-agent orchestration adds latency and complexity that makes sense for batch processing (like, say, automated coverage closure in hardware verification) but works against you when someone just wants a quick answer between classes.
+The real problem again: the information already exists; it's just scattered across a dozen systems that don't talk to each other, and *the student is the integration layer*. Collagent's whole job is to take that job away from you. It becomes the layer instead.
 
-The toolkit spans Canvas LMS (courses, assignments, grades, announcements, calendar), institutional web sources (academic calendars, program pages, financial aid info via a curated registry of verified URLs with clean extraction pipelines), web search as fallback, Google Calendar and Gmail for students who connect their accounts, course catalog search, and a persistent memory layer that tracks the student's academic interests, career goals, and preferences across conversations.
+That changes what using your university feels like. Today you go hunting on google. Portal to portal, login to login, filtering everything down to what's actually relevant to you. With Collagent, it comes the other way around. There are two ways in:
 
-That memory layer isn't a novelty. It's what turns generic responses into contextual ones. Ask about "good electives" and the agent knows your major, your interests, and what you've already taken. The student profile persists across conversations while individual chat histories stay scoped to keep the context window manageable.
+- **Surfaces that come to you.** Before you ask anything, Collagent has already done the looking. Events worth your time. People worth meeting. Each one personalized, each one carrying a short reason it was picked for *you*. You don't search. The campus arrives, pre-filtered.
+- **Chat, for going deeper.** "draft an intro email to that researcher," "what's due this week across all my classes," "does this elective conflict with my work schedule". You just ask, and it pulls the answer from the real systems.
 
-The connective tissue is [MCP](https://www.anthropic.com/news/model-context-protocol). Each integration, whether Canvas, Google Calendar, or an institutional web source, presents itself to the agent through the same protocol interface. The agent doesn't care what's behind each tool. It sees a description, calls it with parameters, and gets structured results back. Adding a new integration (Handshake for career services, a campus dining API) means writing an MCP server, not rewiring the agent's core logic.
+The magic isn't a clever model. Any good model can hold a conversation. The magic is **access plus context**: Collagent is plugged into the systems that already run your life and it filters all of it through who you are. That combination is the entire product. The model is the cheap part.
+
+## It Knows You
+
+Google freaks us out every now and then by sending you an ad for funky socks after you’ve been searching for them on google. Personalization might sound scary, but in the right hands (not google), it is a win-win. The piece that makes this experience feel personal instead of generic is memory. Collagent remembers your major, your interests, your goals, the courses you've taken, the clubs you're in. It carries that forward across every conversation and every surface.
+
+Ask a generic chatbot for "good electives" and it gives you the options you don’t like or already completed. Ask Collagent and it already knows your program, what you've completed, and that you're into hardware. Easy win.  And because you own that context, you can see it and prune it. Collagent works for you, not for the institution's messaging, and that line matters: it's the difference between a tool that markets at you and one that advocates for you.
 
 ## What I Learned
 
-I started with a different idea. It was called Map My Major, an AI course planner that helped students map out their degree path. I pitched it to several students and friends and got consistent feedback: the planning was nice, but students wanted seamless access to *real data from their actual institution*, not generic advice. They didn't need another AI that could discuss course planning in the abstract. They needed one that could check whether CSE 310 has open seats next semester and whether it conflicts with their work schedule.
+I started with a different idea. It was called Map My Major, an AI course planner that helped students map out their degree path. I pitched it to several students and friends and got consistent feedback: the planning was nice, but students wanted seamless access to *real data from their actual institution*, not generic advice. They didn't need another AI that could discuss course planning in the abstract. They needed one that could check whether CSE 310 has open seats next semester and whether it conflicts with their work schedule. Apparently the class registration seat war turned out to be the most wanted use case. 
 
-That feedback killed the original product and birthed this one. Collagent isn't an AI advisor. It's an AI integration layer. The value isn't in the intelligence of the model. It's in what the model can access.
+That feedback killed the original idea and birthed this one.
 
 ## Where This Is Going
 
-The current system is reactive. The student asks, the agent answers. The interesting direction is proactive intelligence. The agent knows your courses, your due dates, your calendar, your interests. It could surface things before you ask: "You have three assignments due Thursday, but your calendar is empty Wednesday afternoon. Want me to block study time?" Or: "The Society of Women Engineers is hosting a resume workshop next week, and you mentioned wanting internship help."
+Currently have a prototype up. (fast-tracked with Claude Code:)) Collagent on GitHub if you’re interested. 
 
-This is where the memory and interest system pays off. Not as a feature, but as the foundation for an agent that genuinely understands a student's context and acts on it. The shift from "tool you query" to "assistant that anticipates" is the difference between a search engine and a colleague.
-
-I'm starting at ASU because that's where I am and that's where I can validate. But the architecture is institution-agnostic by design. Swap the source registry for another university's web properties, point Canvas at a different instance, and the same agent works. The protocol layer doesn't care which university is behind it.
-
-Universities have spent decades building digital infrastructure that works in silos. The student experience is an afterthought, assembled from the seams between systems never designed to be used together. The hypothesis I'm testing is that an LLM with the right tools, the right protocol, and the right context can stitch those seams together. Not by replacing the systems, but by giving students a single place to talk to all of them at once.
+However, the biggest bottleneck I knew was coming and am stuck with now, is actual access and integration into university systems, which is a whole different ballgame and would probably be much complicated than borrowing an API. But I’m also not going to sit here, reverse engineer every API for every data source, for every university. So game plan is to start with ASU, validate a version that works and would only improve with real integration.
