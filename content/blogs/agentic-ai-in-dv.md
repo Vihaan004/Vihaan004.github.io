@@ -58,7 +58,7 @@ The workflow mirrors what a verification engineer does on day one. The agent rea
 State management is filesystem-centric. Testbenches, simulation logs, coverage databases all live on disk. The LangGraph state tracks metadata only: iteration count, current coverage percentage, file paths. This keeps the agent's context window focused on reasoning rather than carrying around large artifacts. We also built a composite tool that chains write, compile, simulate, and parse into a single atomic call, cutting each iteration from 4-5 LLM round-trips to one.
 
 <!-- [CovAgent interactive workflow](/artifacts/covagent_workflow_stepper.html) -->
-<!-- ![CovAgent](/images/covagent.png) -->
+<!-- ![CovAgent](/images/agentic-ai-in-dv/covagent.png) -->
 
 
 
@@ -72,13 +72,13 @@ The headline number: only 12-18% of tokens produce actual testbench code. Everyt
 
 This gets worse with scale. Small designs (under ~800 lines) converge to 100% coverage within 10K-30K tokens. Large designs (2000-8500 lines) need 55K-175K tokens and plateau at 96-99%. Reasoning effort per line of code grows superlinearly. Small designs need roughly 0.1-0.3 reasoning tokens per LOC. Large designs need 4-8. Comprehension is the real bottleneck, not code generation.
 
-![Context vs Coverage](/images/context_vs_cov.png)
-![Token Allocation](/images/token_alloc.png)
+![Context vs Coverage](/images/agentic-ai-in-dv/context_vs_cov.png)
+![Token Allocation](/images/agentic-ai-in-dv/token_alloc.png)
 
 We validated this by comparing our domain-specialized LangGraph agent against a general-purpose [Codex](https://arxiv.org/abs/2107.03374) baseline using the same underlying model (GPT-5.2). The LangGraph agent achieved equal or higher coverage while using 4-13x fewer tokens. The savings came from eliminating unproductive exploration: environment setup, file discovery, ad-hoc coverage parsing. Domain specialization doesn't make the model smarter. It stops the model from wasting time. ChipAgents makes a [similar argument](https://chipagents.ai/blogs/ai-agents-verification) about why domain-specialized agents will replace traditional verification workflows.
 
-![Domain Specialization Impact](/images/domain_specialization_impact.png)
-![Cost vs Coverage](/images/cost_vs_cov.png)
+![Domain Specialization Impact](/images/agentic-ai-in-dv/domain_specialization_impact.png)
+![Cost vs Coverage](/images/agentic-ai-in-dv/cost_vs_cov.png)
 
 ## Not All Coverage Holes Are Created Equal
 
