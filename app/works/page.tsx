@@ -21,18 +21,20 @@ export default function Works() {
                             <div className="work-image">
                                 {work.imageLink ? (
                                     <a href={work.imageLink} target="_blank" rel="noopener noreferrer">
-                                        <Image 
-                                            src={work.image} 
+                                        <Image
+                                            src={work.image}
                                             alt={work.name}
                                             fill
+                                            sizes="(max-width: 768px) 100vw, 160px"
                                             style={{ objectFit: 'cover' }}
                                         />
                                     </a>
                                 ) : (
-                                    <Image 
-                                        src={work.image} 
+                                    <Image
+                                        src={work.image}
                                         alt={work.name}
                                         fill
+                                        sizes="(max-width: 768px) 100vw, 160px"
                                         style={{ objectFit: 'cover' }}
                                     />
                                 )}

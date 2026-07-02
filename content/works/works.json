@@ -3,7 +3,20 @@
     "name": "CovAgent",
     "link": "/blog/agentic-ai-in-dv",
     "description": "An agent orchestration for stimulus generation in RTL verification of sub-system and module level hardware designs. Built with <a href='https://docs.langchain.com/oss/python/langgraph/overview'>LangGraph</a> and Questa Sim.",
-    "image": "/works/covagent.png"
+    "image": "/works/covagent.png",
+    "imageLink": "https://arxiv.org/abs/2604.15657"
+  },
+  {
+    "name": "PPAgent",
+    "link": "https://github.com/Vihaan004/PPAgent",
+    "description": "An agent that refines RTL for better PPA (power, performance, area), benchmarked on <a href='https://github.com/YosysHQ/picorv32'>picorv32</a> with a two-stage evaluation harness using Icarus Verilog and Yosys.",
+    "image": "/works/ppagent.png"
+  },
+  {
+    "name": "MetaSolver",
+    "link": "https://github.com/Vihaan004/cse476-project",
+    "description": "An adaptive reasoning agent that routes questions across 7+ inference-time strategies + an evaluation harness with 1,000+ test instances under a strict LLM call budget.",
+    "image": "/works/metasolver.jpg"
   },
   {
     "name": "Custom CUDA Kernels Bindings",
@@ -13,10 +26,10 @@
   },
   {
     "name": "Collagent",
-    "link": "https://collagent.onrender.com",
+    "link": "/blog/collagent",
     "description": "An agent with custom tools for university data integration. Built with <a href='https://docs.langchain.com/oss/python/langgraph/overview'>LangGraph</a>. For students.",
     "image": "/works/collagent.png",
-    "imageLink": "https://collagent.onrender.com"
+    "imageLink": "https://collagent.vercel.app"
   },
   {
     "name": "Data Den",
@@ -30,6 +43,12 @@
     "link": "https://github.com/Vihaan004/python-sandbox-api",
     "description": "Sandboxed Python execution API. Built with <a href='https://github.com/google/nsjail'>nsjail</a> and Flask. Deployed on Google Cloud Run.",
     "image": "/works/python-sandbox.png"
+  },
+  {
+    "name": "Pomodoro Max",
+    "link": "https://github.com/Vihaan004/pomodoro-max",
+    "description": "A minimal local-first focus timer with live efficiency tracking, built with <a href='https://tauri.app'>Tauri</a> and synced to Notion.",
+    "image": "/works/pomodoro.gif"
   },
   {
     "name": "Medical Image Classification with DL",
