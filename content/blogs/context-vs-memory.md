@@ -1,11 +1,11 @@
 ---
 title: "context vs memory"
 date: "2025-12-10"
-description: "Exploring the distinction between context and memory management in AI agents." 
-draft: false
+description: "Exploring the distinction between context and memory management for LLMs." 
+draft: true
 ---
 
-I’m working on this interesting project using AI and agents, and I’ve repeatedly come to a standstill, coming to realize I have to get this new model to not just ‘know’, but grasp my intent for the project. My work around was creating a lot of spec docs in plain markdown to feed into new chats. Works for one project, but when I need to reference files across projects, that’s when I get stuck. Or at least have to manually identify relevant files and build it as context. 
+I’m working on this interesting project using AI and agents, and I’ve repeatedly come to a standstill, coming to realize I have to get this new model to not just ‘know’, but grasp intent behind the project. My workaround was creating a lot of spec docs to feed across new chats.  
 
 I knew Github copilot worked well within a VS code workspace with good context management. So, I built a parent directory containing folders of all of my repositories. Opened it in a VS code workspace, copilot or any cli agent could now use that as context by selectively reading relevant files. Made the parent folder a repository,and I got myself a project management hub. But the real deal is when I made all those projects git submodules, meaning agents can manage individual projects, update those projects (sync), and fetch the latest context. Kind of like an scrappy, unstructured database for my work. 
 

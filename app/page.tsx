@@ -2,15 +2,9 @@ export default function Home() {
   return (
     <main>
       <p>Hello! 👋🏽 I'm Vihaan.</p>
-      <p><i>Computer Engineer. Builder + <a href="https://scholar.google.com/citations?user=hmqIeJgAAAAJ&hl=en&oi=sra">Researcher</a>.</i></p>
-      <p> I like building systems and tools for productivity, automation, and efficiency.</p>
-      <p>Agentic AI, LLM Inference, Hardware Verification, GPU Acceleration</p> 
-      <p>Currently working on:</p>
-      <ul>
-        <li><a href="/blog/agentic-ai-in-dv">CovAgent - a coverage closure framework for hardware design verification</a></li>
-        <li><a href="/blog/collagent">CollAgent - an interface to surface more of college</a></li>
-      </ul>
-      <p></p>
+      <p>Hardware DV by trade, automation by habit.</p>
+      <p>I'm a recent CompEng grad based in the US.<br/>Background in <i><b>hardware design verification and GPU acceleration</b></i>, now researching and building agentic tooling and LLM infra.</p>
+      <p>Currently working as a research intern at <a href="https://labs.engineering.asu.edu/advent/themes/">The Advent Lab</a>, building <a href="/blog/agentic-ai-in-dv">CovAgent</a> - a stimulus-generation agent for coverage closure in hardware design verification.</p>
     </main>
   );
 }
