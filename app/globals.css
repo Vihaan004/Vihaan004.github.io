@@ -1,11 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
-
 html {
     --width: 720px;
     /* --font-main: Verdana, sans-serif; */
-    --font-secondary: 'Lexend', sans-serif;
-    /* --font-secondary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-    --font-secondary: 'Lexend', sans-serif;
+    --font-secondary: 'Segoe UI', sans-serif;
+    /* --font-secondary: '', sans-serif; */
     --font-scale: 1.1em;
     --background-color: #f4f3ee;
     --heading-color: #222;
@@ -33,10 +30,10 @@ html {
 }
 
 html.dark {
-    --background-color: #1f1e1d;
+    --background-color: #121212;
     --heading-color: #eee;
     --text-color: #d4d2c9;
-    --link-color: #c15f3c;
+    --link-color: #d25a2e;
     --visited-color:  #d4d2c9;
     --code-background-color: #000;
     --code-color: #ddd;
@@ -45,10 +42,10 @@ html.dark {
 }
 
 html.light {
-    --background-color: #f0eee6;
+    --background-color: #f0efeb;
     --heading-color: #222;
     --text-color: #1f1e1d;
-    --link-color: #c15f3c;
+    --link-color: #d25a2e;
     --visited-color:  #1f1e1d;
     --code-background-color: #f2f2f2;
     --code-color: #222;
@@ -104,7 +101,7 @@ html {
 body {
     font-family: var(--font-secondary);
     font-size: var(--font-scale);
-    font-weight: 300;
+    font-weight: 400;
     margin: auto;
     padding: 20px;
     max-width: var(--width);

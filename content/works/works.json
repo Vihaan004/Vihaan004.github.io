@@ -63,6 +63,12 @@
     "image": "/works/PA-shell.png"
   },
   {
+    "name": "Asynchronous FIFO Design and Verification",
+    "link": "https://github.com/Vihaan004/async-fifo-sv",
+    "description": "Parameterized asynchronous FIFO in SystemVerilog, a self-checking SVA/coverage-driven testbench + DPI-based verification.",
+    "image": "/works/async-fifo.jpg"
+  },
+  {
     "name": "MIPS Multicycle Processor",
     "link": "https://github.com/Vihaan004/mips-multicycle-processor",
     "description": "A modular MIPS multicycle processor implementation focused on simulation, analysis, and exploration of processor design.",
