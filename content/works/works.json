@@ -1,8 +1,8 @@
 [
   {
     "name": "CovAgent",
-    "link": "/blog/agentic-ai-in-dv",
-    "description": "An agent orchestration for stimulus generation in RTL verification of sub-system and module level hardware designs. Built with <a href='https://docs.langchain.com/oss/python/langgraph/overview'>LangGraph</a> and Questa Sim.",
+    "link": "https://github.com/advent-lab/llm-verif",
+    "description": "An agent orchestration for stimulus generation in RTL verification of sub-system and module level hardware designs. Paper accepted at MLCAD 2026. <a href='/blog/agentic-ai-in-dv'>Read more</a>.",
     "image": "/works/covagent.png",
     "imageLink": "https://arxiv.org/abs/2604.15657"
   },
