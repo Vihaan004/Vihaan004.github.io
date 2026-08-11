@@ -44,7 +44,7 @@ function Footer () {
   return (
     <div className="footer">
       <div className="socials">
-        <Link href="/Vihaan_Patel_Resume.pdf"><Image src={resume} alt="resume"/></Link>
+        <Link href="/Vihaan_Patel_CV.pdf"><Image src={resume} alt="resume"/></Link>
         <Link href="https://github.com/Vihaan004"><Image src={github} alt="github"/></Link>
         <Link href="https://www.linkedin.com/in/vihaanpatel/"><Image src={linkedin} alt="linkedin"/></Link>
         <Link href="mailto:vihaan004@gmail.com"><Image src={email} alt="email"/></Link>
