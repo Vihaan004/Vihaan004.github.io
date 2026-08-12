@@ -2,7 +2,7 @@
 title: "AI vs Social Media"
 date: "2026-08-11"
 description: "Running The Social Dilemma's core ideas against the AI boom, concept by concept. Same three goals, a parallel strategy, and a much better domain."
-draft: true
+draft: false
 ---
 
 I recently rewatched *The Social Dilemma* after having the idea of drawing a resemblance between the AI boom (LLMs) and the internet + social media boom. The concepts that the documentary surfaces are largely built on the intersection of behavioral psychology, surveillance capitalism, and extractive data science. The 'Attention Economy' and 'Persuasive Design' being the central ideas.
