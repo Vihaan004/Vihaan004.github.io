@@ -69,15 +69,22 @@
     "image": "/works/async-fifo.jpg"
   },
   {
-    "name": "MIPS Multicycle Processor",
+    "name": "Pipelined MIPS UVM Verification",
+    "link": "https://github.com/Vihaan004/mips-pipeline-uvm-verification",
+    "description": "Constrained-random UVM environment for a 5-stage pipelined MIPS, with functional coverage over instruction fields, register/memory dependencies, and branch outcomes.",
+    "image": "/works/mips-pipeline.png"
+
+  },
+  {
+    "name": "MIPS Multicycle Processor (FPGA)",
     "link": "https://github.com/Vihaan004/mips-multicycle-processor",
-    "description": "A modular MIPS multicycle processor implementation focused on simulation, analysis, and exploration of processor design.",
+    "description": "A MIPS multicycle processor in Verilog, synthesized and deployed on a Nexys A7-100T FPGA, demonstrated on hardware with a rotating-LED program.",
     "image": "/works/FPGA.jpg"
   },
   {
-    "name": "Matrix Multiplier",
+    "name": "Matrix Multiplier (FPGA)",
     "link": "https://github.com/Vihaan004/matrix-multiplier",
-    "description": "A Verilog-based systolic 4x4 matrix multiplier with integrated RAM, optimized for hardware design and computation.",
+    "description": "A 4x4 systolic matrix multiplier in Verilog with integrated RAM, synthesized for a Nexys A7-100T FPGA.",
     "image": "/works/matmul.png"
   },
   {
