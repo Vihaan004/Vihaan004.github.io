@@ -42,10 +42,10 @@ html.dark {
 }
 
 html.light {
-    --background-color: #f0efeb;
+    --background-color: #dddcd9;
     --heading-color: #222;
     --text-color: #1f1e1d;
-    --link-color: #d25a2e;
+    --link-color: #1569be;
     --visited-color:  #1f1e1d;
     --code-background-color: #f2f2f2;
     --code-color: #222;
@@ -109,7 +109,7 @@ body {
     background-color: var(--background-color);
     word-wrap: break-word;
     overflow-wrap: break-word;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.4px;
     line-height: 1.5;
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -149,9 +149,11 @@ a {
     color: var(--link-color);
     cursor: pointer;
     text-decoration: none;
+    /* text-decoration: underline; */
 }
 
 a:hover {
+    color: var(--link-color);
     text-decoration: underline; 
 }
 
